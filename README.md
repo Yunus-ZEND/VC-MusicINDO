@@ -24,7 +24,7 @@
 
 #### NOTE: Tolong jangan di clone, capek editnya :") Kalo mau silahkan fork aja.
 
-![VC Musik Logo](https://telegra.ph/file/d8e9534a07418917c04cd.jpg)
+![VC Music Logo](https://telegra.ph/file/d8e9534a07418917c04cd.jpg)
 
 ### Group Support 🇮🇩
 `
