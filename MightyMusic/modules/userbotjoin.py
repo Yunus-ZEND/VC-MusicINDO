@@ -1,6 +1,6 @@
 # I get code from DaisyXMusic
 # Creator by Yunus Zend
-# Thanks to daisy for this project
+# Thanks Daisy for the cool project
 
 from pyrogram import Client, filters
 from pyrogram.errors import UserAlreadyParticipant
