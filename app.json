@@ -30,7 +30,7 @@
     "PROJECT_NAME": {
       "description": "Nama untuk project musik milikmu.",
       "required": false,
-      "value": "Vc-Musik project v2"
+      "value": "MightyMusic Project"
     },
     "ASSISTANT_NAME": {
       "description": "Nama assisten untuk bot musik mu tanpa menggunakan @.",
@@ -42,14 +42,14 @@
       "value": "VBPAOK-QOYCCP-DRLUBP-NALUFQ-ARQ"
     },    
     "BG_IMAGE": {
-      "description": "Background untuk bot musik kamu (Anda bisa menggunakan BG transparan) [IGNORE].",
+      "description": "Background untuk bot musik kamu (Anda bisa menggunakan BG transparan) kalo ga ada biarin aja biar pake background buatan aku :v [IGNORE].",
       "required": false,
-      "value": "https://telegra.ph/file/4841deeeed1f4d44fd5f7.jpg"
+      "value": "https://telegra.ph/file/7d6dbdcca1185832fe3a1.png"
     },     
     "UPDATES_CHANNEL": {
-      "description": "Channel untuk tempat update tanpa menggunakan @ [Kalo gapunya skip aja, gkpapa kok].",
+      "description": "Channel untuk tempat update tanpa menggunakan @ [Kalo gapunya biarin aja jangan diganti, gkpapa kok].",
       "required": false,
-      "value": "Bot Info Channel"
+      "value": "BotIndo_update"
     },    
     "API_ID": {
       "description": "App ID dari my.telegram.org/apps",
@@ -65,7 +65,7 @@
       "required": true
     },
     "SUDO_USERS": {
-      "description": "Daftar ID pengguna dihitung sebagai admin di mana-mana (dipisahkan dengan spasi).",
+      "description": "Daftar ID pengguna dihitung sebagai admin di mana-mana (jangan pake spasi yah).",
       "required": true
     },
     "DURATION_LIMIT": {
