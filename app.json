@@ -1,0 +1,71 @@
+{
+  "name": "Geez-MusicProject",
+  "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
+  "keywords": ["music", "voicechat", "telegram"],
+  "repository": "https://github.com/Vckyou/Geez-MusicProject",
+  "stack": "container",
+  "env": {
+    "SESSION_NAME": {
+      "description": "Gunakan String Pyrogram Jangan Telethon",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Ambil Token Bot Di @BotFather",
+      "required": true
+    },
+    "BOT_USERNAME": {
+      "description": "Masukan Username BOT Anda Dan Jangan Gunakan @",
+      "required": true
+    },
+    "BOT_NAME": {
+      "description": "Nama Bot MusicPlayer Anda.",
+      "required": false,
+      "value": ""
+    },
+    "SUPPORT_GROUP": {
+      "description": "Grup dukungan MusicPlayer Anda tanpa @ [Skip Aja Kalo Lu Gapunya]",
+      "required": false,
+      "value": "VcgSupportGroup"
+    },
+    "ARQ_API_KEY": {
+      "description": "Ambil api dari bot telegram » t.me/ARQRobot atau @ARQRobot",
+      "required": true
+    },
+    "PROJECT_NAME": {
+      "description": "Nama proyek MusicPlayer Anda..",
+      "required": false,
+      "value": "Geez Music Project"
+    },
+    "ASSISTANT_NAME": {
+      "description": "Isi Nama pengguna asisten MusicPlayer Anda tanpa @.",
+      "required": true
+    },    
+    "BG_IMAGE": {
+      "description": "BG image of bot (Use transparent one) [IGNORE].",
+      "required": false,
+      "value": "https://telegra.ph/file/ad54dc991d9e41dbbe37d.png"
+    },     
+    "UPDATES_CHANNEL": {
+      "description": "Untuk Melihat Update an Di Channel @ [Skipp Aja Kalo Lu Gapunya].",
+      "required": false,
+      "value": "Vckyouuu"
+    },    
+    "API_ID": {
+      "description": "App ID from my.telegram.org/apps",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "App hash from my.telegram.org/apps",
+      "required": true
+    },
+    "SUDO_USERS": {
+      "description": "Daftar ID pengguna dihitung sebagai admin di mana-mana (dipisahkan oleh spasi).",
+      "required": true
+    },
+    "DURATION_LIMIT": {
+      "description": "Batas durasi audio maksimal untuk download (minutes).",
+      "required": true,
+      "value": "15"
+    }
+  }
+}
