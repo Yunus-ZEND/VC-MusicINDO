@@ -24,5 +24,6 @@ SOURCE_CODE = getenv("SOURCE_CODE", "github.com/Yunus-ZEND/VC-MusicINDO")
 DURATION_LIMIT = int(getenv("DURATION_LIMIT", "7"))
 COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ !").split())
 PMPERMIT = getenv("PMPERMIT", None)
+OWNER_NAME = getenv ("OWNER_NAME", "ZendYNS")
 
 SUDO_USERS = list(map(int, getenv("SUDO_USERS").split()))
