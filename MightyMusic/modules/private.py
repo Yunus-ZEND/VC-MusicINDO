@@ -21,7 +21,7 @@ def _start(client, message):
                     InlineKeyboardButton(
                         "🏷 Group", url=f"https://t.me/{SUPPORT_GROUP}"),
                     InlineKeyboardButton(
-                        "🦠 Help",url="https://t.me/{}?start=help".format(bot.username))
+                        "🦠 Help",url="https://t.me/{}?start=help".format({BOT_USERNAME}))
                 ]
             ]
         ),
