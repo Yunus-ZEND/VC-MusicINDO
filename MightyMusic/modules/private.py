@@ -21,7 +21,7 @@ def _start(client, message):
                     InlineKeyboardButton(
                         "🏷 Group", url=f"https://t.me/{SUPPORT_GROUP}"),
                     InlineKeyboardButton(
-                        "🦠 Help",callback_data="help_back")
+                        "🦠 Help", url="https://t.me/{}?start=help")
                 ]
             ]
         ),
