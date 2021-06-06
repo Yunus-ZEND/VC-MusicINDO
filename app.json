@@ -9,6 +9,10 @@
       "description": "Masukkan string sessions pilih P jangan T!!",
       "required": true
     },
+    "OWNER_NAME": {
+      "description": "Masukin Username Pemilik!! Bukan Username Asisten tapi kalo misalnya pake 1 akun yg jadi pemilik skaligus asisten yah gkpapa lah (usernamenya tanpa menggunakan @).",
+      "required": true
+    },
     "BOT_TOKEN": {
       "description": "Bot token dari @BotFather",
       "required": true
