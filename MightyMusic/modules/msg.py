@@ -1,18 +1,15 @@
 import os
-from MightyMusic.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL
-
-@Client.on_message(other_filters2)
-async def start(_, message: Message):
-      await message.reply_sticker("CAACAgUAAxkBAAEKPA1gvChnpAOY9U9oaN41qV3ToIcvLwACIQMAAqF8qFfDqJEpmk3aXB8E")
-      await message.reply_text("**Hallo [{}](tg://user?id={})!**\n\n📮 Saya adalah bot canggih yang dibuat untuk memutar musik di obrolan suara Grup & Saluran Channel Telegram.\n\n📝 Ketik /help untuk mendapat info dari saya.")
+from MightyMusic.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL,BOT_USERNAME
+class Messages():
+      START_MSG = "**Hallo [{}](tg://user?id={})!**\n━━━━━━━━━━━━━━━━━━━━━━━━\n\n📮 Saya adalah bot canggih yang dibuat untuk memutar musik di obrolan suara Grup & Saluran Channel Telegram.\n\n📝 Ketik /help untuk mendapat info dari saya.\n╭═════════════\n├◈ Bot Musik: @{BOT_USERNAME}\n├◈ Asisten: @{ASSISTANT_NAME}\n╰╼════════════"
       HELP_MSG = [
         ".",
 f"""
-**Hey 👋 Welcome back to {PROJECT_NAME}
+**Hy lagi kamu bertemu lagi dengan saya {PROJECT_NAME}
 
-⚪️ {PROJECT_NAME} can play music in your group's voice chat as well as channel voice chats
+⚪️ {PROJECT_NAME} bisa memutar musik baik itu di VC Group atau VC Channel
 
-⚪️ Assistant name >> @{ASSISTANT_NAME}\n\nClick next for instructions**
+⚪️ Nama Asisten >> @{ASSISTANT_NAME}\n\nKlik tombol dibawah untuk melihat intruksi lain**
 """,
 
 f"""
@@ -28,31 +25,31 @@ f"""
 2) Send /userbotjoinchannel in linked group
 3) Now send commands in linked group
 
-**Commands**
+**Beberapa Command**
 
-**=>> Song Playing 🎧**
+**=>> Memainkan Lagu 🎧**
 
-- /play: Play song using youtube music
-- /play [yt url] : Play the given yt url
-- /play [reply yo audio]: Play replied audio
-- /dplay: Play song via deezer
-- /splay: Play song via jio saavn
+• /play <nama lagu> : putar lagu yang Anda minta
+• /play <url youtube> : Putar lagu melalui balasan url youtube
+• /play <balas ke audio> : putar file balasan
+• /dplay <nama lagu> : putar lagu yang Anda minta melalui deezer
+• /splay <nama lagu> : putar lagu yang Anda minta melalui jio saavn
 
 **=>> Playback ⏯**
 
-- /player: Open Settings menu of player
-- /skip: Skips the current track
-- /pause: Pause track
-- /resume: Resumes the paused track
-- /end: Stops media playback
-- /current: Shows the current Playing track
-- /playlist: Shows playlist
+- /player: buka panel pengaturan pemutar musik
+- /skip: putar lagu berikutnya
+- /pause: jeda pemutaran lagu
+- /resume: melanjutkan pemutaran lagu
+- /end: hentikan pemutaran musik
+- /current: Tampilkan sedang diputar
+- /playlist: Tampilkan daftar yang sedang diputar
 
 *Player cmd and all other cmds except /play, /current  and /playlist  are only for admins of the group.
 """,
         
 f"""
-**=>> Channel Music Play 🛠**
+**=>> Putar Musik Di Channel 📮**
 
 ⚪️ For linked group admins only:
 
