@@ -1,7 +1,6 @@
 import os
 from MightyMusic.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL
 class Messages():
-      START_MSG = 
       await message.reply_sticker("CAACAgUAAxkBAAEKPA1gvChnpAOY9U9oaN41qV3ToIcvLwACIQMAAqF8qFfDqJEpmk3aXB8E")
       await message.reply_text("**Hallo [{}](tg://user?id={})!**\n\n📮 Saya adalah bot canggih yang dibuat untuk memutar musik di obrolan suara Grup & Saluran Channel Telegram.\n\n📝 Ketik /help untuk mendapat info dari saya.")
       HELP_MSG = [
