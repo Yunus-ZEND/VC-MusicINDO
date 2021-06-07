@@ -23,7 +23,7 @@ from MightyMusic.config import ARQ_API_KEY
 from MightyMusic.config import BOT_NAME as bn
 from MightyMusic.config import DURATION_LIMIT
 from MightyMusic.config import UPDATES_CHANNEL as updateschannel
-from MightyMusic.config import OWNER_NAME as own
+from MightyMusic.config import OWNER_USERNAME as own
 from MightyMusic.config import que
 from MightyMusic.function.admins import admins as a
 from MightyMusic.helpers.admins import get_administrators
