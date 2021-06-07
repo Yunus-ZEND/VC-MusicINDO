@@ -1,7 +1,7 @@
 import os
 from MightyMusic.config import SOURCE_CODE,ASSISTANT_NAME,UPDATES_CHANNEL,PROJECT_NAME,SUPPORT_GROUP,OWNER_NAME
 class Messages():
-      START_MSG = "**Hallo [{}](tg://user?id={})!**\n━━━━━━━━━━━━━━━━━━━━━━━━\n\n📮 Saya adalah bot canggih yang dibuat untuk memutar musik di obrolan suara Grup & Saluran Channel Telegram.\n\n📝 Ketik /help untuk mendapat info dari saya.\n\n🎻 Selamat menikmati sensasi mendengarkan musik di VC GROUP/ CHANNEL kamu."
+      START_MSG = "**Hallo [{}](tg://user?id={})!**\n━━━━━━━━━━━━━━━━━━━━━━━━\n📮 Saya adalah bot canggih yang dibuat untuk memutar musik di obrolan suara Grup & Saluran Channel Telegram.\n\n📝 Ketik /help untuk mendapat info dari saya.\n━━━━━━━━━━━━━━━━━━━━━━━━\n🎻 Selamat menikmati sensasi mendengarkan musik di VC GROUP/ CHANNEL kamu."
       HELP_MSG = [
         ".",
 f"""
@@ -28,7 +28,7 @@ f"""
 
 **Beberapa Command**
 
-**=>> Memainkan Lagu 🎧**
+**◎› Memainkan Lagu 🎧**
 
 • /play <nama lagu> : putar lagu yang Anda minta
 • /play <url youtube> : Putar lagu melalui balasan url youtube
@@ -36,7 +36,7 @@ f"""
 • /dplay <nama lagu> : putar lagu yang Anda minta melalui deezer
 • /splay <nama lagu> : putar lagu yang Anda minta melalui jio saavn
 
-**=>> Playback ⏯**
+**◎› Playback ⏯**
 
 - /player: buka panel pengaturan pemutar musik
 - /skip: putar lagu berikutnya
@@ -50,7 +50,7 @@ f"""
 """,
         
 f"""
-**=>> Putar Musik Di Channel 📮**
+**◎› Putar Musik Di Channel 📮**
 
 ⚪️ For linked group admins only:
 
@@ -78,12 +78,12 @@ channel is also can be used instead of c ( /cplay = /channelplay )
 """,
 
 f"""
-**=>> More tools 🧑‍🔧**
+**◎› More Info 📲**
 
 - /admincache: Updates admin info of your group. Try if bot isn't recognize admin
 - /userbotjoin: Invite @{ASSISTANT_NAME} Userbot to your chat
 
-**=>> Commands for Sudo Users ⚔️**
+**◎› 📝 Command Khusus buat pengguna sudo**
 
  - /userbotleaveall - remove assistant from all chats
  - /gcast <reply to message> - globally brodcast replied message to all chats
