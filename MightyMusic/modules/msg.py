@@ -17,15 +17,15 @@ f"""
 f"""
 **Setting up**
 
-1) Make bot admin (Group and in channel if use cplay)
-2) Start a voice chat
-3) Try /play [song name] for the first time by an admin
-*) If userbot joined enjoy music, If not add @{ASSISTANT_NAME} to your group and retry
+1) Membuat bot admin (Group dan di channel jika menggunakan cplay)
+2) Mulai obrolan suara
+3) Coba /play [nama lagu] pertama kali oleh admin
+*) Jika userbot bergabung nikmati musik, Jika tidak tambahkan @{ASSISTANT_NAME} ke grup Anda dan coba lagi
 
 **For Channel Music Play**
-1) Make me admin of your channel 
-2) Send /userbotjoinchannel in linked group
-3) Now send commands in linked group
+1) Jadikan saya admin saluran Anda
+2) Kirim /userbotjoinchannel di grup tertaut
+3) Sekarang kirim perintah di grup tertaut
 
 **Beberapa Command**
 
@@ -55,41 +55,41 @@ f"""
 
 ⚪️ For linked group admins only:
 
-- /cplay [song name] - play song you requested
-- /cdplay [song name] - play song you requested via deezer
-- /csplay [song name] - play song you requested via jio saavn
-- /cplaylist - Show now playing list
-- /cccurrent - Show now playing
-- /cplayer - open music player settings panel
-- /cpause - pause song play
-- /cresume - resume song play
-- /cskip - play next song
-- /cend - stop music play
-- /userbotjoinchannel - invite assistant to your chat
+- /cplay [song name] - putar lagu yang Anda minta
+- /cdplay [song name] - putar lagu yang Anda minta via deezer
+- /csplay [song name] - putar lagu yang Anda minta via jio saavn
+- /cplaylist - Perlihatkan daftar yang dimainkan
+- /cccurrent - Perlihatkan yang diputar sekarang
+- /cplayer - buka panel pengaturan pemutar musik
+- /cpause - jeda pemutaran lagu
+- /cresume - lanjutkan pemutaran lagu
+- /cskip - putar lagu berikutnya
+- /cend - stop pemutaran lagu
+- /userbotjoinchannel - Undang asisten ke chat kamu
 
-channel is also can be used instead of c ( /cplay = /channelplay )
+saluran Channel juga dapat digunakan sebagai pengganti c ( /cplay = /channelplay )
 
-⚪️ If you donlt like to play in linked group:
+⚪️ Jika Anda tidak suka bermain di grup tertaut:
 
-1) Get your channel ID.
-2) Create a group with tittle: Channel Music: your_channel_id
-3) Add bot as Channel admin with full perms
-4) Add @{ASSISTANT_NAME} to the channel as an admin.
-5) Simply send commands in your group.
+1) Dapatkan ID saluran Anda.
+2) Buat grup dengan judul: Channel Music: your_channel_id
+3) Tambahkan bot sebagai admin Saluran dengan izin penuh
+4) Tambahkan @{ASSISTANT_NAME} ke saluran sebagai admin.
+5) Cukup kirim perintah di grup Anda.
 """,
 
 f"""
 **◎› More Info 📲**
 
-- /admincache: Updates admin info of your group. Try if bot isn't recognize admin
-- /userbotjoin: Invite @{ASSISTANT_NAME} Userbot to your chat
+- /admincache: Memperbarui info admin grup Anda. Coba jika bot tidak mengenali admin
+- /userbotjoin: Undang @{ASSISTANT_NAME} Userbot ke obrolan Anda
 
 **◎› 📝 Command Khusus buat pengguna sudo**
 
- - /userbotleaveall - remove assistant from all chats
- - /gcast <reply to message> - globally brodcast replied message to all chats
- - /pmpermit [on/off] - enable/disable pmpermit message
-*Sudo Users can execute any command in any groups
+ - /userbotleaveall - Keluarkan asisten musik dari semua obrolan chat
+ - /gcast <reply to message> - global brodcast membalas pesan ke semua obrolan
+ - /pmpermit [on/off] - enable/disable pesan pmpermit 
+*Pengguna Sudo dapat menjalankan perintah apa pun di grup mana pun
 
 """
       ]
