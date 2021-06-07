@@ -531,7 +531,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
                 ],
                 [
-                    InlineKeyboardButton(text="📝Owner", url=f"https://t.me/{OWNER_NAME}"),
+                    InlineKeyboardButton(text="📝Owner", url=f"https://t.me/{creator}"),
                     InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
                 ],
                 [InlineKeyboardButton(text="🗑 Tutup", callback_data="cls")],
@@ -575,7 +575,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
                 ],
                 [
-                    InlineKeyboardButton(text="📝Owner ", url=f"https://t.me/{OWNER_NAME}"),
+                    InlineKeyboardButton(text="📝Owner ", url=f"https://t.me/{creator}"),
                     InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
                 ],
                 [InlineKeyboardButton(text="🗑 Tutup", callback_data="cls")],
