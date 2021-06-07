@@ -9,8 +9,8 @@
       "description": "Masukkan string sessions pilih P jangan T!!",
       "required": true
     },
-    "OWNER_NAME": {
-      "description": "Masukin Username Pemilik!! Bukan Username Asisten tapi kalo misalnya pake 1 akun yg jadi pemilik skaligus asisten yah gkpapa lah (usernamenya tanpa menggunakan @).",
+    "OWNER_USERNAME": {
+      "description": "Masukin Username Pemilik!! Bukan Username Asisten tapi kalo misalnya pake 1 akun yg jadi pemilik skaligus asisten yah gkpapa lah (usernamenya tanpa menggunakan tanda @).",
       "required": true
     },
     "BOT_TOKEN": {
@@ -48,7 +48,7 @@
     "BG_IMAGE": {
       "description": "Background untuk bot musik kamu (Anda bisa menggunakan BG transparan) kalo ga ada biarin aja biar pake background buatan aku :v [IGNORE].",
       "required": false,
-      "value": "https://telegra.ph/file/7d6dbdcca1185832fe3a1.png"
+      "value": "https://telegra.ph/file/8918a543bea565b199fbb.png"
     },     
     "UPDATES_CHANNEL": {
       "description": "Channel untuk tempat update tanpa menggunakan @ [Kalo gapunya biarin aja jangan diganti, gkpapa kok].",
