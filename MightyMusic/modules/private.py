@@ -1,8 +1,10 @@
+# Creator by Yunus Zend
+
 import logging
 from MightyMusic.modules.msg import Messages as tr
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
-from MightyMusic.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL,BOT_USERNAME
+from MightyMusic.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL,BOT_USERNAME,OWNER_NAME
 logging.basicConfig(level=logging.INFO)
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['start']))
@@ -21,7 +23,7 @@ def _start(client, message):
                     InlineKeyboardButton(
                         "🏷 Group", url=f"https://t.me/{SUPPORT_GROUP}"),
                     InlineKeyboardButton(
-                        "🦠 Sumber", url=f"https://{SOURCE_CODE}")
+                        "✏️ Owner", url=f"https://t.me/{OWNER_NAME}")
                 ]
             ]
         ),
@@ -71,22 +73,23 @@ def help_answer(client, callback_query):
 def map(pos):
     if(pos==1):
         button = [
-            [InlineKeyboardButton(text = '▶️', callback_data = "help+2")]
+            [InlineKeyboardButton(text = 'Next', callback_data = "help+2")]
         ]
     elif(pos==len(tr.HELP_MSG)-1):
         url = f"https://t.me/{SUPPORT_GROUP}"
         button = [
-            [InlineKeyboardButton("➕ Add me to your Group 🙋‍♀️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
-            [InlineKeyboardButton(text = '📲 Updates', url=f"https://t.me/{UPDATES_CHANNEL}"),
-             InlineKeyboardButton(text = '💬 Support', url=f"https://t.me/{SUPPORT_GROUP}")],
-            [InlineKeyboardButton(text = '🛠 Source Code 🛠', url=f"https://{SOURCE_CODE}")],
-            [InlineKeyboardButton(text = '◀️', callback_data = f"help+{pos-1}")]
+            [InlineKeyboardButton("📝 Tambahkan saya ke group", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+            [InlineKeyboardButton(text = '📮 Channel', url=f"https://t.me/{UPDATES_CHANNEL}"),
+             InlineKeyboardButton(text = '🏷 Group', url=f"https://t.me/{SUPPORT_GROUP}")],
+            [InlineKeyboardButton(text = '💡 Sumber', url=f"https://{SOURCE_CODE}"),
+             InlineKeyboardButton(text = '✏️ Owner', url=f"https://t.me/{OWNER_NAME}")],
+            [InlineKeyboardButton(text = 'Kembali', callback_data = f"help+{pos-1}")]
         ]
     else:
         button = [
             [
-                InlineKeyboardButton(text = '◀️', callback_data = f"help+{pos-1}"),
-                InlineKeyboardButton(text = '▶️', callback_data = f"help+{pos+1}")
+                InlineKeyboardButton(text = 'Kembali', callback_data = f"help+{pos-1}"),
+                InlineKeyboardButton(text = 'Next', callback_data = f"help+{pos+1}")
             ],
         ]
     return button
@@ -94,12 +97,12 @@ def map(pos):
 @Client.on_message(filters.command("help") & ~filters.private & ~filters.channel)
 async def ghelp(_, message: Message):
     await message.reply_text(
-        f"""**🙋‍♀️ Hello there! I can play music in the voice chats of telegram groups & channels.**""",
+        f"""**📝 Hallo!! Saya bisa memutar musik baik itu di VC Group atau VC Channel.**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🟡 Click here for help 🟡", url=f"https://t.me/{BOT_USERNAME}?start"
+                        "📮 Klik disini untuk bantuan", url=f"https://t.me/{BOT_USERNAME}?start"
                     )
                 ]
             ]
