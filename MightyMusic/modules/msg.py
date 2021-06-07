@@ -1,5 +1,5 @@
 import os
-from MightyMusic.config import SOURCE_CODE,ASSISTANT_NAME,UPDATES_CHANNEL,PROJECT_NAME,SUPPORT_GROUP,OWNER_NAME
+from MightyMusic.config import SOURCE_CODE,ASSISTANT_NAME,UPDATES_CHANNEL,PROJECT_NAME,SUPPORT_GROUP,OWNER_USERNAME
 class Messages():
       START_MSG = "**Hallo [{}](tg://user?id={})!**\n━━━━━━━━━━━━━━━━━━━━━━━━\n📮 Saya adalah bot canggih yang dibuat untuk memutar musik di obrolan suara Grup & Saluran Channel Telegram.\n\n📝 Ketik /help untuk mendapat info dari saya.\n━━━━━━━━━━━━━━━━━━━━━━━━\n🎻 Selamat menikmati sensasi mendengarkan musik di VC GROUP/ CHANNEL kamu."
       HELP_MSG = [
@@ -10,7 +10,7 @@ f"""
 ⚪️ {PROJECT_NAME} bisa memutar musik baik itu di VC Group atau VC Channel
 
 ⚪️ Nama Asisten >> @{ASSISTANT_NAME}\n\nKlik tombol dibawah untuk melihat intruksi lain**
-◎› Owner Bot >> @{OWNER_NAME}
+◎› Owner Bot >> @{OWNER_USERNAME}
 ◎› Owner Project >> @ZendYNS
 """,
 
@@ -90,6 +90,7 @@ f"""
  - /gcast <reply to message> - global brodcast membalas pesan ke semua obrolan
  - /pmpermit [on/off] - enable/disable pesan pmpermit 
 *Pengguna Sudo dapat menjalankan perintah apa pun di grup mana pun
+◎› Owner Project: @ZendYNS
 
 """
       ]
