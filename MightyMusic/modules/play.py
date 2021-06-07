@@ -1,3 +1,5 @@
+# Creator by Yunus Zend
+
 import json
 import os
 from os import path
@@ -20,6 +22,7 @@ from MightyMusic.config import ARQ_API_KEY
 from MightyMusic.config import BOT_NAME as bn
 from MightyMusic.config import DURATION_LIMIT
 from MightyMusic.config import UPDATES_CHANNEL as updateschannel
+from MightyMusic.config import OWNER_NAME as creator
 from MightyMusic.config import que
 from MightyMusic.function.admins import admins as a
 from MightyMusic.helpers.admins import get_administrators
@@ -126,18 +129,18 @@ async def playlist(client, message):
         temp.append(t)
     now_playing = temp[0][0]
     by = temp[0][1].mention(style="md")
-    msg = "**Now Playing** in {}".format(message.chat.title)
-    msg += "\n- " + now_playing
-    msg += "\n- Req by " + by
+    msg = "**Sekarang Dimainkan** in {}".format(message.chat.title)
+    msg += "\n◎› " + now_playing
+    msg += "\n◎› Request dari " + by
     temp.pop(0)
     if temp:
         msg += "\n\n"
-        msg += "**Queue**"
+        msg += "**Antri**"
         for song in temp:
             name = song[0]
             usr = song[1].mention(style="md")
-            msg += f"\n- {name}"
-            msg += f"\n- Req by {usr}\n"
+            msg += f"\n◎› {name}"
+            msg += f"\n◎› Request dari {usr}\n"
     await message.reply_text(msg)
 
 
@@ -167,15 +170,15 @@ def r_ply(type_):
     mar = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("⏹", "leave"),
-                InlineKeyboardButton("⏸", "puse"),
-                InlineKeyboardButton("▶️", "resume"),
+                InlineKeyboardButton("⏹", "tutup"),
+                InlineKeyboardButton("⏸", "Jeda"),
+                InlineKeyboardButton("▶️", "Lanjut"),
                 InlineKeyboardButton("⏭", "skip"),
             ],
             [
                 InlineKeyboardButton("Playlist 📖", "playlist"),
             ],
-            [InlineKeyboardButton("❌ Close", "cls")],
+            [InlineKeyboardButton("❌ Tutup", "cls")],
         ]
     )
     return mar
@@ -336,15 +339,15 @@ async def m_cb(b, cb):
         marr = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("⏹", "leave"),
-                    InlineKeyboardButton("⏸", "puse"),
-                    InlineKeyboardButton("▶️", "resume"),
+                    InlineKeyboardButton("⏹", "tutup"),
+                    InlineKeyboardButton("⏸", "jeda"),
+                    InlineKeyboardButton("▶️", "lanjut"),
                     InlineKeyboardButton("⏭", "skip"),
                 ],
                 [
                     InlineKeyboardButton("Playlist 📖", "playlist"),
                 ],
-                [InlineKeyboardButton("❌ Close", "cls")],
+                [InlineKeyboardButton("🗑 Tutup", "cls")],
             ]
         )
         await cb.message.edit(stats, reply_markup=marr)
@@ -386,7 +389,7 @@ async def m_cb(b, cb):
 @Client.on_message(command("play") & other_filters)
 async def play(_, message: Message):
     global que
-    lel = await message.reply("🔄 **Processing**")
+    lel = await message.reply("🔄 **Sedang Memproses Lagu**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -443,7 +446,7 @@ async def play(_, message: Message):
     message.from_user.id
     message.from_user.first_name
     text_links=None
-    await lel.edit("🔎 **Finding**")
+    await lel.edit("🔎 **Sedang mencari lagu tersebut**")
     message.from_user.id
     if message.reply_to_message:
         entities = []
@@ -480,7 +483,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                     InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
                 ],
-                [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+                [InlineKeyboardButton(text="🗑 Tutup", callback_data="cls")],
             ]
         )
         file_name = get_file_name(audio)
@@ -498,7 +501,7 @@ async def play(_, message: Message):
         )
     elif urls:
         query = toxt
-        await lel.edit("🎵 **Processing**")
+        await lel.edit("🎵 **Sedang Memproses**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -528,10 +531,10 @@ async def play(_, message: Message):
                     InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
                 ],
                 [
-                    InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
+                    InlineKeyboardButton(text="📝Owner", url=f"https://t.me/{OWNER_NAME}"),
                     InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
                 ],
-                [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+                [InlineKeyboardButton(text="🗑 Tutup", callback_data="cls")],
             ]
         )
         requested_by = message.from_user.first_name
@@ -542,7 +545,7 @@ async def play(_, message: Message):
         for i in message.command[1:]:
             query += " " + str(i)
         print(query)
-        await lel.edit("🎵 **Processing**")
+        await lel.edit("🎵 **Memproses Lagu**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -572,10 +575,10 @@ async def play(_, message: Message):
                     InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
                 ],
                 [
-                    InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
+                    InlineKeyboardButton(text="📝Owner ", url=f"https://t.me/{OWNER_NAME}"),
                     InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
                 ],
-                [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+                [InlineKeyboardButton(text="🗑 Tutup", callback_data="cls")],
             ]
         )
         requested_by = message.from_user.first_name
@@ -625,13 +628,13 @@ async def play(_, message: Message):
 @Client.on_message(filters.command("dplay") & filters.group & ~filters.edited)
 async def deezer(client: Client, message_: Message):
     global que
-    lel = await message_.reply("🔄 **Processing**")
+    lel = await message_.reply("🔄 **Memproses Lagu tersebut**")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "DaisyMusic"
+        user.first_name = "MightyMusic"
     usar = user
     wew = usar.id
     try:
@@ -705,8 +708,8 @@ async def deezer(client: Client, message_: Message):
                 InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                 InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
             ],
-            [InlineKeyboardButton(text="Listen On Deezer 🎬", url=f"{url}")],
-            [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+            [InlineKeyboardButton(text="Dengarkan melalui Deezer 🎬", url=f"{url}")],
+            [InlineKeyboardButton(text="🗑 Tutup", callback_data="cls")],
         ]
     )
     file_path = await convert(wget.download(url))
@@ -724,7 +727,7 @@ async def deezer(client: Client, message_: Message):
         qeue.append(appendable)
         await res.edit_text(f"✯{bn}✯= #️⃣ Queued at position {position}")
     else:
-        await res.edit_text(f"✯{bn}✯=▶️ Playing.....")
+        await res.edit_text(f"✯{bn}✯=▶️ Memainkan.....")
 
         que[chat_id] = []
         qeue = que.get(chat_id)
@@ -753,13 +756,13 @@ async def deezer(client: Client, message_: Message):
 @Client.on_message(filters.command("splay") & filters.group & ~filters.edited)
 async def jiosaavn(client: Client, message_: Message):
     global que
-    lel = await message_.reply("🔄 **Processing**")
+    lel = await message_.reply("🔄 **Memproses Lagu**")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "DaisyMusic"
+        user.first_name = "MightyMusic"
     usar = user
     wew = usar.id
     try:
@@ -796,7 +799,7 @@ async def jiosaavn(client: Client, message_: Message):
                     # print(e)
                     await lel.edit(
                         f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                        "\n\nOr manually add @DaisyXmusic to your Group and try again</b>",
+                        "\n\nOr manually add @VCindo_bot to your Group and try again</b>",
                     )
     try:
         await USER.get_chat(chid)
@@ -811,7 +814,7 @@ async def jiosaavn(client: Client, message_: Message):
     text = message_.text.split(" ", 1)
     query = text[1]
     res = lel
-    await res.edit(f"Searching 👀👀👀 for `{query}` on jio saavn")
+    await res.edit(f"Sedang mencari 👀👀👀 dari `{query}` dalam jio saavn")
     try:
         songs = await arq.saavn(query)
         if not songs.ok:
@@ -837,7 +840,7 @@ async def jiosaavn(client: Client, message_: Message):
                     text="Join Updates Channel", url=f"https://t.me/{updateschannel}"
                 )
             ],
-            [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+            [InlineKeyboardButton(text="🗑 Tutup", callback_data="cls")],
         ]
     )
     file_path = await convert(wget.download(slink))
