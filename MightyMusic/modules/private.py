@@ -23,7 +23,7 @@ def _start(client, message):
                     InlineKeyboardButton(
                         "🏷 Group", url=f"https://t.me/{SUPPORT_GROUP}"),
                     InlineKeyboardButton(
-                        "✏️ Owner", url=f"https://t.me/{OWNER_NAME}")
+                        "✏️ Owner", url=f"https://t.me/{OWNER_USERNAME}")
                 ]
             ]
         ),
@@ -81,8 +81,8 @@ def map(pos):
             [InlineKeyboardButton("📝 Tambahkan saya ke group", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
             [InlineKeyboardButton(text = '📮 Channel', url=f"https://t.me/{UPDATES_CHANNEL}"),
              InlineKeyboardButton(text = '🏷 Group', url=f"https://t.me/{SUPPORT_GROUP}")],
-            [InlineKeyboardButton(text = '💡 Sumber', url=f"https://{SOURCE_CODE}"),
-             InlineKeyboardButton(text = '✏️ Owner', url=f"https://t.me/{OWNER_NAME}")],
+            [InlineKeyboardButton(text = '💡 Owner Bot', url=f"https://{OWNER_USERNAME}"),
+             InlineKeyboardButton(text = '✏️ Owner Project', url=f"https://t.me/ZendYNS")],
             [InlineKeyboardButton(text = 'Kembali', callback_data = f"help+{pos-1}")]
         ]
     else:
