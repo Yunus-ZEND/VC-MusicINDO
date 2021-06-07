@@ -17,7 +17,7 @@ async def pmPermit(client: USER, message: Message):
                 return
             await USER.send_message(
                 message.chat.id,
-                "Hy kamu, Ini adalah layanan asisten .\n\n ❗️ Rules:\n   - Tidak ada obrolan yang diizinkan\n   - Dilarang melakukan spam \n\n 👉 **KIRIM LINK UNDANGAN GROUP ATAU USERNAME JIKA USERBOT TIDAK BISA JOIN GROUP ANDA.**\n\n ⚠️ Penolakan: Jika Anda mengirim pesan di sini berarti admin akan melihat pesan Anda dan bergabung dengan obrolan\n    - Jangan tambahkan pengguna ini ke grup rahasia.\n   - Jangan Bagikan info pribadi di sini\n\n",
+                "Hy kamu, Ini adalah layanan asisten .\n\n ❗️ Rules:\n   ◎› Tidak ada obrolan yang diizinkan\n   ◎› Dilarang melakukan spam \n\n 📝 **KIRIM LINK UNDANGAN GROUP ATAU USERNAME JIKA USERBOT TIDAK BISA JOIN GROUP ANDA.**\n\n ⚠️ Penolakan: Jika Anda mengirim pesan di sini berarti admin akan melihat pesan Anda dan bergabung dengan obrolan\n    ◎›  Jangan tambahkan pengguna ini ke grup rahasia.\n   ◎› Jangan Bagikan info pribadi di sini\n\n",
             )
             return
 
