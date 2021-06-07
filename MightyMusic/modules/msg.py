@@ -10,7 +10,8 @@ f"""
 ⚪️ {PROJECT_NAME} bisa memutar musik baik itu di VC Group atau VC Channel
 
 ⚪️ Nama Asisten >> @{ASSISTANT_NAME}\n\nKlik tombol dibawah untuk melihat intruksi lain**
-Owner Bot >> @{OWNER_NAME}
+◎› Owner Bot >> @{OWNER_NAME}
+◎› Owner Project >> @ZendYNS
 """,
 
 f"""
