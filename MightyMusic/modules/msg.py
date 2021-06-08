@@ -15,14 +15,14 @@ f"""
 """,
 
 f"""
-**Setting up**
+**Pengaturan Utama**
 
 1) Membuat bot admin (Group dan di channel jika menggunakan cplay)
 2) Mulai obrolan suara
 3) Coba /play [nama lagu] pertama kali oleh admin
 *) Jika userbot bergabung nikmati musik, Jika tidak tambahkan @{ASSISTANT_NAME} ke grup Anda dan coba lagi
 
-**For Channel Music Play**
+**Untuk Channel Music Play**
 1) Jadikan saya admin saluran Anda
 2) Kirim /userbotjoinchannel di grup tertaut
 3) Sekarang kirim perintah di grup tertaut
@@ -39,33 +39,33 @@ f"""
 
 **◎› Playback ⏯**
 
-- /player: buka panel pengaturan pemutar musik
-- /skip: putar lagu berikutnya
-- /pause: jeda pemutaran lagu
-- /resume: melanjutkan pemutaran lagu
-- /end: hentikan pemutaran musik
-- /current: Tampilkan sedang diputar
-- /playlist: Tampilkan daftar yang sedang diputar
+• /player: buka panel pengaturan pemutar musik
+• /skip: putar lagu berikutnya
+• /pause: jeda pemutaran lagu
+• /resume: melanjutkan pemutaran lagu
+• /end: hentikan pemutaran musik
+• /current: Tampilkan sedang diputar
+• /playlist: Tampilkan daftar yang sedang diputar
 
-*Player cmd and all other cmds except /play, /current  and /playlist  are only for admins of the group.
+*Cmd player dan semua cmd lain kecuali /play, /current dan /playlist hanya untuk admin grup*
 """,
         
 f"""
 **◎› Putar Musik Di Channel 📮**
 
-⚪️ For linked group admins only:
+⚪️ Hanya untuk admin grup tertaut:
 
-- /cplay [song name] - putar lagu yang Anda minta
-- /cdplay [song name] - putar lagu yang Anda minta via deezer
-- /csplay [song name] - putar lagu yang Anda minta via jio saavn
-- /cplaylist - Perlihatkan daftar yang dimainkan
-- /cccurrent - Perlihatkan yang diputar sekarang
-- /cplayer - buka panel pengaturan pemutar musik
-- /cpause - jeda pemutaran lagu
-- /cresume - lanjutkan pemutaran lagu
-- /cskip - putar lagu berikutnya
-- /cend - stop pemutaran lagu
-- /userbotjoinchannel - Undang asisten ke chat kamu
+• /cplay [song name] - putar lagu yang Anda minta
+• /cdplay [song name] - putar lagu yang Anda minta via deezer
+• /csplay [song name] - putar lagu yang Anda minta via jio saavn
+• /cplaylist - Perlihatkan daftar yang dimainkan
+• /cccurrent - Perlihatkan yang diputar sekarang
+• /cplayer - buka panel pengaturan pemutar musik
+• /cpause - jeda pemutaran lagu
+• /cresume - lanjutkan pemutaran lagu
+• /cskip - putar lagu berikutnya
+• /cend - stop pemutaran lagu
+• /userbotjoinchannel - Undang asisten ke chat kamu
 
 saluran Channel juga dapat digunakan sebagai pengganti c ( /cplay = /channelplay )
 
@@ -81,16 +81,17 @@ saluran Channel juga dapat digunakan sebagai pengganti c ( /cplay = /channelplay
 f"""
 **◎› More Info 📲**
 
-- /admincache: Memperbarui info admin grup Anda. Coba jika bot tidak mengenali admin
-- /userbotjoin: Undang @{ASSISTANT_NAME} Userbot ke obrolan Anda
+• /admincache: Memperbarui info admin grup Anda. Coba jika bot tidak mengenali admin
+• /userbotjoin: Undang @{ASSISTANT_NAME} Userbot ke obrolan Anda
 
 **◎› 📝 Command Khusus buat pengguna sudo**
 
- - /userbotleaveall - Keluarkan asisten musik dari semua obrolan chat
- - /gcast <reply to message> - global brodcast membalas pesan ke semua obrolan
- - /pmpermit [on/off] - enable/disable pesan pmpermit 
+ • /userbotleaveall - Keluarkan asisten musik dari semua obrolan chat
+ • /gcast <reply to message> - global brodcast membalas pesan ke semua obrolan
+ • /pmpermit [on/off] - enable/disable pesan pmpermit 
 *Pengguna Sudo dapat menjalankan perintah apa pun di grup mana pun
-◎› Owner Project: @ZendYNS
+
+◎› Owner Project: [Yunus Zend](https://t.me/ZendYNS)
 
 """
       ]
