@@ -155,9 +155,9 @@ def updated_stats(chat, queue, vol=100):
         if len(que) > 0:
             stats += "\n\n"
             stats += "Volume : {}%\n".format(vol)
-            stats += "Songs in queue : `{}`\n".format(len(que))
-            stats += "Now Playing : **{}**\n".format(queue[0][0])
-            stats += "Requested by : {}".format(queue[0][1].mention)
+            stats += "Lagu dalam antrian : `{}`\n".format(len(que))
+            stats += "Sekarang Dimainkan : **{}**\n".format(queue[0][0])
+            stats += "Request dari : {}".format(queue[0][1].mention)
     else:
         stats = None
     return stats
