@@ -528,9 +528,9 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                    InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
-                    InlineKeyboardButton(text="📝Owner", url=f"https://t.me/{own}"),
+                    InlineKeyboardButton("Playlist", callback_data="playlist"),
+                    InlineKeyboardButton("Menu", callback_data="menu"),
+                    InlineKeyboardButton(text="Owner", url=f"https://t.me/{own}"),
                 ],
                 [
                     InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
@@ -573,9 +573,9 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                    InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
-                    InlineKeyboardButton(text="📝Owner", url=f"https://t.me/{own}"),
+                    InlineKeyboardButton("Playlist", callback_data="playlist"),
+                    InlineKeyboardButton("Menu", callback_data="menu"),
+                    InlineKeyboardButton(text="Owner", url=f"https://t.me/{own}"),
                 ],
                 [
                     InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
