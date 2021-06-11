@@ -20,8 +20,6 @@ from youtubesearchpython import SearchVideos
 
 from MightyMusic.config import DURATION_LIMIT
 from MightyMusic.modules.play import arq
-from MightyMusic.config import OWNER_USERNAME
-
 
 @Client.on_message(filters.command("song") & ~filters.channel)
 def song(client, message):
@@ -60,7 +58,7 @@ def song(client, message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = "**Berhasil Di Upload 🎵\n◎› Owner Bot: @{OWNER_USERNAME}\n◎› Owner Project: [Yunus Zend](https://t.me/ZendYNS) **"
+        rep = "**Berhasil Di Upload 🎵\n◎› Owner Project: [Yunus Zend](https://t.me/ZendYNS) **"
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(dur_arr[i]) * secmul
