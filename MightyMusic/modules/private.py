@@ -4,7 +4,7 @@ import logging
 from MightyMusic.modules.msg import Messages as tr
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
-from MightyMusic.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL,BOT_USERNAME,OWNER_USERNAME
+from MightyMusic.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,SUPPORT_CHANNEL,BOT_USERNAME,OWNER_USERNAME
 logging.basicConfig(level=logging.INFO)
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['start']))
@@ -19,7 +19,7 @@ def _start(client, message):
                         "📝 Tambahkan saya ke group", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
                 [
                     InlineKeyboardButton(
-                        "📮 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"), 
+                        "📮 Channel", url=f"https://t.me/{SUPPORT_CHANNEL}"), 
                     InlineKeyboardButton(
                         "🏷 Group", url=f"https://t.me/{SUPPORT_GROUP}"),
                     InlineKeyboardButton(
@@ -38,7 +38,7 @@ async def gstart(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🏷 Group Support", url=f"https://t.me/{SUPPORT_GROUP}"
+                        "🏷 Owner Bot", url=f"https://t.me/{OWNER_USERNAME}"
                     )
                 ]
             ]
@@ -79,7 +79,7 @@ def map(pos):
         url = f"https://t.me/{SUPPORT_GROUP}"
         button = [
             [InlineKeyboardButton("📝 Tambahkan saya ke group", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
-            [InlineKeyboardButton(text = '📮 Channel', url=f"https://t.me/{UPDATES_CHANNEL}"),
+            [InlineKeyboardButton(text = '📮 Channel', url=f"https://t.me/{SUPPORT_CHANNEL}"),
              InlineKeyboardButton(text = '🏷 Group', url=f"https://t.me/{SUPPORT_GROUP}")],
             [InlineKeyboardButton(text = '💡 Owner Bot', url=f"https://t.me/{OWNER_USERNAME}"),
              InlineKeyboardButton(text = '✏️ Owner Project', url=f"https://t.me/ZendYNS")],
