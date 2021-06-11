@@ -50,19 +50,19 @@
       "required": false,
       "value": "https://telegra.ph/file/8918a543bea565b199fbb.png"
     },     
-    "UPDATES_CHANNEL": {
-      "description": "Channel untuk tempat update tanpa menggunakan @ [Kalo gapunya biarin aja jangan diganti, gkpapa kok].",
+    "SUPPORT_CHANNEL": {
+      "description": "Isi username Channel bebas tanpa menggunakan @ [Kalo gapunya biarin aja jangan diganti, gkpapa kok].",
       "required": false,
-      "value": "BotIndo_update"
+      "value": "TeamKingUserbot"
     },    
     "API_ID": {
       "description": "App ID dari my.telegram.org/apps",
       "required": true
     },
     "PMPERMIT": {
-      "description": "Ubah untuk mematikan",
+      "description": "ENABLE untuk menghidupkan, DISABLE untuk mematikan",
       "required": false,
-      "value": "ENABLE"
+      "value": "DISABLE"
     },    
     "API_HASH": {
       "description": "Api hash dari my.telegram.org/apps",
