@@ -24,7 +24,7 @@ from MightyMusic.modules.play import time_to_seconds
 from MightyMusic.modules.play import changeImageSize
 from MightyMusic.config import BOT_NAME as bn
 from MightyMusic.config import DURATION_LIMIT
-from MightyMusic.config import UPDATES_CHANNEL as updateschannel
+from MightyMusic.config import SUPPORT_CHANNEL as updateschannel
 from MightyMusic.config import que
 from MightyMusic.function.admins import admins as a
 from MightyMusic.helpers.errors import DurationLimitError
