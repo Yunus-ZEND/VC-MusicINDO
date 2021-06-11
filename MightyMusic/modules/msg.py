@@ -1,5 +1,5 @@
 import os
-from MightyMusic.config import SOURCE_CODE,ASSISTANT_NAME,UPDATES_CHANNEL,PROJECT_NAME,SUPPORT_GROUP,OWNER_USERNAME
+from MightyMusic.config import SOURCE_CODE,ASSISTANT_NAME,SUPPORT_CHANNEL,PROJECT_NAME,SUPPORT_GROUP,OWNER_USERNAME
 class Messages():
       START_MSG = "**Hallo [{}](tg://user?id={})!**\n━━━━━━━━━━━━━━━━━━━━━━━━\n📮 Saya adalah bot canggih yang dibuat untuk memutar musik di obrolan suara Grup & Saluran Channel Telegram.\n\n📝 Ketik /help untuk mendapat info dari saya.\n━━━━━━━━━━━━━━━━━━━━━━━━\n🎻 Selamat menikmati sensasi mendengarkan musik di VC GROUP/ CHANNEL kamu."
       HELP_MSG = [
