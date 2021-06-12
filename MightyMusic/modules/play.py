@@ -130,13 +130,13 @@ async def playlist(client, message):
         temp.append(t)
     now_playing = temp[0][0]
     by = temp[0][1].mention(style="md")
-    msg = "━━━━━━━━━━━━━━━━━━━━━━━━\n**Sekarang Dimainkan** di {}".format(message.chat.title)
+    msg = "**Sekarang Dimainkan** di {}".format(message.chat.title)
     msg += "\n◎› " + now_playing
     msg += "\n◎› Request dari " + by
     temp.pop(0)
     if temp:
         msg += "\n\n"
-        msg += "━━━━━━━━━━━━━━━━━━━━━━\n**Sedang dlam Antrian**"
+        msg += "**Sedang dalam Antrian**"
         for song in temp:
             name = song[0]
             usr = song[1].mention(style="md")
