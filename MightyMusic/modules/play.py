@@ -523,8 +523,7 @@ async def play(_, message: Message):
             )
             print(str(e))
             return
-        dlurl=url
-        dlurl=dlurl.replace("youtube","youtubepp")
+    
         keyboard = InlineKeyboardMarkup(
             [
                 [
@@ -533,10 +532,9 @@ async def play(_, message: Message):
                     InlineKeyboardButton(text="Owner", url=f"https://t.me/{own}"),
                 ],
                 [
-                    InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                    InlineKeyboardButton(text="📥 Download", url=f"{dlurl}"),
+                    InlineKeyboardButton(text="Update", url=f"https://t.me/Indoinfobot"),
+                    InlineKeyboardButton(text="Tutup", callback_data="cls")
                 ],
-                [InlineKeyboardButton(text="🗑 Tutup", callback_data="cls")],
             ]
         )
         requested_by = message.from_user.first_name
@@ -568,8 +566,7 @@ async def play(_, message: Message):
             )
             print(str(e))
             return
-        dlurl=url
-        dlurl=dlurl.replace("youtube","youtubepp")
+        
         keyboard = InlineKeyboardMarkup(
             [
                 [
@@ -578,10 +575,9 @@ async def play(_, message: Message):
                     InlineKeyboardButton(text="Owner", url=f"https://t.me/{own}"),
                 ],
                 [
-                    InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                    InlineKeyboardButton(text="📥 Download", url=f"{dlurl}"),
+                    InlineKeyboardButton(text="Update", url=f"https://t.me/Indoinfobot"),
+                    InlineKeyboardButton(text="Tutup", callback_data="cls")
                 ],
-                [InlineKeyboardButton(text="🗑 Tutup", callback_data="cls")],
             ]
         )
         requested_by = message.from_user.first_name
@@ -598,7 +594,7 @@ async def play(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption=f"#⃣ Lagu yang kamu request **antri** di posisi {position}!",
+            caption=f"━━━━━━━━━━━━━━━━━━━━━━━━\n❏ Lagu yang kamu request **antri** di posisi {position}!",
             reply_markup=keyboard,
         )
         os.remove("final.png")
@@ -620,7 +616,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="▶️ **Sedang diputar** disini request dari {} via Youtube Music".format(
+            caption="━━━━━━━━━━━━━━━━━━━━━━━━\n❏ **Sedang diputar** disini request dari {} melalui Youtube Music".format(
                 message.from_user.mention()
             ),
         )
