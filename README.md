@@ -42,8 +42,6 @@ Klik tombol dibawah untuk deploy VC MusicINDO`
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Yunus-ZEND/VC-MusicINDO)
 
-#### Tambahan: Mau deploy Userbot keren? [KLIK DISINI](https://github.com/apisuserbot/King-Userbot) •KING USERBOT 🇮🇩
-
 ### Command yang tersedia 🚀
 
 - `/play <nama lagu> - putar lagu yang Anda minta`
