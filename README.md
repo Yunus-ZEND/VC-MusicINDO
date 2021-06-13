@@ -1,5 +1,7 @@
 <a href="https://cooltext.com"><img src="https://images.cooltext.com/5533766.gif" width="802" height="96" alt="King Userbot" /></a>
 
+Join [Channel Update](https://t.me/indoinfobot) untuk melihat info seputar bot
+
 <p align="center">
   <a href="https://github.com/Yunus-ZEND/VC-MusicINDO/fork">
     <img src="https://img.shields.io/github/forks/Yunus-ZEND/VC-MusicINDO?label=Fork&style=social">
