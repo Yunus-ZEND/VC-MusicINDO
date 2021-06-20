@@ -595,7 +595,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             caption = f"🏷 **Judul:** [{title[:23]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
-                    + f"🎼 **Request Dari:** {message.from_user.mention}",reply_markup=keyboard)
+                    + f"🎧 **Request Dari:** {message.from_user.mention}",reply_markup=keyboard)
         os.remove("final.png")
         return await lel.delete()
     else:
@@ -615,10 +615,8 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="━━━━━━━━━━━━━━━━━━━━━━━━\n❏ **Sedang diputar** disini request dari {} melalui Youtube Music".format(
-                message.from_user.mention()
-            ),
-        )
+            caption = f"🏷 **Judul:** [{title[:23]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
+                    + f"🎧 **Request Dari:** {message.from_user.mention}",reply_markup=keyboard)
         os.remove("final.png")
         return await lel.delete()
 
