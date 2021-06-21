@@ -91,7 +91,7 @@ async def skip(_, message: Message):
         skip = qeue.pop(0)
     if not qeue:
         return
-    await message.reply_text(f"◎› Skip Lagu tersebut **{skip[0]}**\n◎› Sekarang dimainkan **{qeue[0][0]}**")
+    await message.reply_text(f"◎› Skip Lagu **{skip[0]}**\n◎› Sekarang dimainkan **{qeue[0][0]}**")
 
 
 @Client.on_message(filters.command("admincache"))
