@@ -30,6 +30,8 @@ Klik tombol dibawah untuk deploy VC MusicINDO`
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Yunus-ZEND/VC-MusicINDO)
 
+![VC Music Logo](https://telegra.ph/file/e61756ca5358977de3600.jpg)
+
 ### Command yang tersedia 🚀
 
 - `/play <nama lagu> - putar lagu yang Anda minta`
