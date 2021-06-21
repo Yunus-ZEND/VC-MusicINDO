@@ -19,7 +19,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from Python_ARQ import ARQ
 from youtube_search import YoutubeSearch
 
-from MightyMusic.config import ARQ_API_KEY
+from MightyMusic.config import ARQ_API_KEY, ASSISTANT_NAME
 from MightyMusic.config import BOT_NAME as bn
 from MightyMusic.config import DURATION_LIMIT
 from MightyMusic.config import SUPPORT_CHANNEL as updateschannel
@@ -434,7 +434,7 @@ async def play(_, message: Message):
                     # print(e)
                     await lel.edit(
                         f"<b>🔴 Flood Wait Error 🔴 \nPengguna {user.first_name} tidak dapat bergabung dengan grup Anda karena banyak permintaan untuk userbot! Pastikan pengguna tidak dibanned di grup."
-                        "\n\nAtau tambahkan asisten secara manual ke Group dan coba lagi</b>",
+                        f"\n\nAtau tambahkan asisten {ASSISTANT_NAME} secara manual ke Group dan coba lagi</b>",
                     )
     try:
         await USER.get_chat(chid)
@@ -676,7 +676,7 @@ async def deezer(client: Client, message_: Message):
                     # print(e)
                     await lel.edit(
                         f"<b>🔴 Flood Wait Error 🔴 \nPengguna {user.first_name} tidak dapat bergabung dengan grup Anda karena banyak permintaan untuk userbot! Pastikan pengguna tidak dibanned di grup."
-                        "\n\nAtau tambahkan asisten bot secara manual ke Group dan coba lagi</b>",
+                        f"\n\nAtau tambahkan asisten {ASSISTANT_NAME} bot secara manual ke Group dan coba lagi</b>",
                     )
     try:
         await USER.get_chat(chid)
@@ -804,7 +804,7 @@ async def jiosaavn(client: Client, message_: Message):
                     # print(e)
                     await lel.edit(
                         f"<b>🔴 Flood Wait Error 🔴 \nPengguna {user.first_name} tidak dapat bergabung dengan grup Anda karena banyak permintaan untuk userbot! Pastikan pengguna tidak dibanned di grup."
-                        "\n\nAtau tambahkan asisten @VCindo_bot secara manual ke Group dan coba lagi</b>",
+                        f"\n\nAtau tambahkan asisten {ASSISTANT_NAME} secara manual ke Group dan coba lagi</b>",
                     )
     try:
         await USER.get_chat(chid)
