@@ -29,6 +29,7 @@ from MightyMusic.function.admins import admins as a
 from MightyMusic.helpers.admins import get_administrators
 from MightyMusic.helpers.channelmusic import get_chat_id
 from MightyMusic.helpers.errors import DurationLimitError
+from MightyMusic.helpers.decorators import errors
 from MightyMusic.helpers.decorators import authorized_users_only
 from MightyMusic.helpers.filters import command, other_filters
 from MightyMusic.helpers.gets import get_file_name
@@ -230,13 +231,13 @@ async def p_cb(b, cb):
             temp.append(t)
         now_playing = temp[0][0]
         by = temp[0][1].mention(style="md")
-        msg = "**Sekarang dimainkan** in {}".format(cb.message.chat.title)
+        msg = "**Sekarang dimainkan** di {}".format(cb.message.chat.title)
         msg += "\n◎› " + now_playing
         msg += "\n◎› Req dari " + by
         temp.pop(0)
         if temp:
             msg += "\n\n"
-            msg += "**Antri**"
+            msg += "**Dalam Antrian**"
             for song in temp:
                 name = song[0]
                 usr = song[1].mention(style="md")
@@ -298,13 +299,13 @@ async def m_cb(b, cb):
             temp.append(t)
         now_playing = temp[0][0]
         by = temp[0][1].mention(style="md")
-        msg = "**Sekarang dimainkan** in {}".format(cb.message.chat.title)
+        msg = "**Sekarang dimainkan** di {}".format(cb.message.chat.title)
         msg += "\n◎› " + now_playing
         msg += "\n◎› Req dari " + by
         temp.pop(0)
         if temp:
             msg += "\n\n"
-            msg += "**Antri**"
+            msg += "**Dalam Antrian**"
             for song in temp:
                 name = song[0]
                 usr = song[1].mention(style="md")
