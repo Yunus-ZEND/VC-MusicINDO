@@ -29,7 +29,6 @@ from MightyMusic.function.admins import admins as a
 from MightyMusic.helpers.admins import get_administrators
 from MightyMusic.helpers.channelmusic import get_chat_id
 from MightyMusic.helpers.errors import DurationLimitError
-from MightyMusic.helpers.decorators import errors
 from MightyMusic.helpers.decorators import authorized_users_only
 from MightyMusic.helpers.filters import command, other_filters
 from MightyMusic.helpers.gets import get_file_name
