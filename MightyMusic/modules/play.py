@@ -523,7 +523,8 @@ async def play(_, message: Message):
             )
             print(str(e))
             return
-    
+        dlurl=url
+        dlurl=dlurl.replace("youtube","youtubepp")
         keyboard = InlineKeyboardMarkup(
             [
                 [
@@ -566,7 +567,8 @@ async def play(_, message: Message):
             )
             print(str(e))
             return
-        
+        dlurl=url
+        dlurl=dlurl.replace("youtube","youtubepp")
         keyboard = InlineKeyboardMarkup(
             [
                 [
@@ -594,9 +596,9 @@ async def play(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption=f"━━━━━━━━━━━━━━━━━━━━━━━━\n❏ Lagu yang kamu request **antri** di posisi {position}!",
-            reply_markup=keyboard,
-        )
+            caption = f"🏷 **Judul:** [{title[:23]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
+                    + f"🎧 **Request Dari:** {message.from_user.mention}",
+                   reply_markup=keyboard)
         os.remove("final.png")
         return await lel.delete()
     else:
@@ -616,10 +618,9 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="━━━━━━━━━━━━━━━━━━━━━━━━\n❏ **Sedang diputar** disini request dari {} melalui Youtube Music".format(
-                message.from_user.mention()
-            ),
-        )
+            caption = f"🏷 **Judul:** [{title[:23]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
+                    + f"🎧 **Request Dari:** {message.from_user.mention}",
+                   reply_markup=keyboard)
         os.remove("final.png")
         return await lel.delete()
 
@@ -670,7 +671,7 @@ async def deezer(client: Client, message_: Message):
                     # print(e)
                     await lel.edit(
                         f"<b>🔴 Flood Wait Error 🔴 \nPengguna {user.first_name} tidak dapat bergabung dengan grup Anda karena banyak permintaan untuk userbot! Pastikan pengguna tidak dibanned di grup."
-                        "\n\nAtau tambahkan asisten @VCindo_bot secara manual ke Group dan coba lagi</b>",
+                        "\n\nAtau tambahkan asisten bot secara manual ke Group dan coba lagi</b>",
                     )
     try:
         await USER.get_chat(chid)
