@@ -30,7 +30,7 @@ Klik tombol dibawah untuk deploy VC MusicINDO`
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Yunus-ZEND/VC-MusicINDO)
 
-![addphoto](https://telegra.ph/file/e61756ca5358977de3600.jpg)
+![addphoto](https://telegra.ph/file/8218eb6dceae195b9fb6f.jpg)
 
 ### Command yang tersedia 🚀
 
