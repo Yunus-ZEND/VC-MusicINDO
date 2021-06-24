@@ -75,7 +75,7 @@
     "DURATION_LIMIT": {
       "description": "Batas durasi audio maksimum untuk unduhan (per menit).",
       "required": true,
-      "value": "60"
+      "value": "30"
     }
   }
 }
