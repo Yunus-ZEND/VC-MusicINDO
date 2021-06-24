@@ -12,27 +12,27 @@
 
 #### NOTE: Tolong jangan di clone, capek editnya :") Kalo mau silahkan fork aja.
 
-![VC Music Logo](https://telegra.ph/file/d8e9534a07418917c04cd.jpg)
+![Stereo Music Logo](https://telegra.ph/file/39978084594ada3dc4912.png)
 
-### Group Support 🇮🇩
+### Channel Support ☕
 `
 Klik tombol di bawah untuk join ke group support kami`
-   <a href="https://t.me/KingUserbotSupport"><img src="https://img.shields.io/badge/Grup%20Support%3F-Klik Disini-yellow?&style=flat-square?&logo=telegram" width=165px></a></p>
+   <a href="https://t.me/infobotmusik"><img src="https://img.shields.io/badge/Grup%20Support%3F-Klik Disini-yellow?&style=flat-square?&logo=telegram" width=165px></a></p>
 
-### String Session 🖇
+### String Session 💻
 `
 Klik tombol Run on repl.it untuk membuat string milikmu, tolong pilih P yah jangan T`
    [![Run on Repl.it](https://repl.it/badge/github/STARKGANG/friday)](https://replit.com/@apisuserbot/String-Session?v=1)
 
-### <p align="left">DEPLOY VC-MUSIKINDO ♫</p>
+### <p align="left">DEPLOY STEREO MUSIC PRJCT ♫</p>
 `
-Klik tombol dibawah untuk deploy VC MusicINDO`
+Klik tombol dibawah untuk deploy STEREO MUSIC PRJCT`
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Yunus-ZEND/VC-MusicINDO)
 
-![addphoto](https://telegra.ph/file/8218eb6dceae195b9fb6f.jpg)
+![addphoto](https://telegra.ph/file/39978084594ada3dc4912.png)
 
-### Command yang tersedia 🚀
+### Command yang tersedia 🔔
 
 - `/play <nama lagu> - putar lagu yang Anda minta`
 
@@ -44,7 +44,7 @@ Klik tombol dibawah untuk deploy VC MusicINDO`
 
 - `/playlist - Tampilkan daftar yang sedang diputar`
 
-- `/current - Tampilkan sedang diputar`
+- `/current - Tampilkan Yang sedang diputar`
 
 - `/song <nama lagu> - unduh lagu yang Anda inginkan dengan cepat`
 
@@ -56,7 +56,7 @@ Klik tombol dibawah untuk deploy VC MusicINDO`
 
 - `/video <nama lagu> - unduh video yang Anda inginkan dengan cepat`
 
-### Khusus admin saja 🛰
+### Khusus admin saja 📯
 
 - `/player - buka panel pengaturan pemutar musik`
 
@@ -112,7 +112,7 @@ saluran juga dapat digunakan sebagai pengganti c`
 
 - `/pmpermit [on/off] - aktifkan/nonaktifkan pesan pmpermit`
 
-#### Izin dalam PM 📋
+#### Izin dalam PM ⌨
 
 - `.ok - menyetujui seseorang untuk pm Anda`
 
