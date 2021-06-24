@@ -14,12 +14,12 @@
       "description": "Masukkan string sessions Pyrogram dan pilih (P) untuk assitan yg naik ke VCG
       "required": true
     },
-    "OWNER_USERNAME": {
-      "description": "Masukin Username kamu Atau Username Telegram mu",
+    "OWNER": {
+      "description": "Masukan Nama Anda Atau Username Telegram Anda",
       "required": true
     },
     "BOT_TOKEN": {
-      "description": "Ambil Bot token dari @BotFather",
+      "description": "Masukan Bot token dari @BotFather",
       "required": true
     },
     "BOT_USERNAME": {
@@ -32,12 +32,12 @@
       "value": ""
     },
     "SUPPORT_GROUP": {
-      "description": "Group support untuk bot musik punya kamu tanpa menggunakan @ [kalo ga ada skip aja, gak masalah]",
+      "description": "Group dukungan MusicPlayer anda tanpa @ [skip ini jika Anda tidak punya]",
       "required": false,
       "value": "luciddreaams"
     },
     "PROJECT_NAME": {
-      "description": "Masukin Nama untuk project musik milikmu.",
+      "description": "Nama proyek MusicPlayer Anda.",
       "required": false,
       "value": "Stereo Music Project"
     },
@@ -53,10 +53,10 @@
     "BG_IMAGE": {
       "description": "Custom Background Play Musik Dan Gunakan Foto Yang Transparant Dengan Format .png Atau .jpg ",
       "required": false,
-      "value": "https://telegra.ph/file/39978084594ada3dc4912.png"
+      "value": "https://telegra.ph/file/39978084594ada3dc4912.jpg"
     },     
-    "SUPPORT_CHANNEL": {
-      "description": "Isi username Channel bebas tanpa menggunakan @ [Skip aja klo kamu gak punya].",
+    "UPDATE_CHANNEL": {
+      "description": "Update Channel tanpa @ [Skip ini jika Anda tidak punya].",
       "required": false,
       "value": "infobotmusik"
     },    
@@ -65,20 +65,20 @@
       "required": true
     },
     "PMPERMIT": {
-      "description": "ENABLE untuk menghidupkan, DISABLE untuk mematikan",
+      "description": "Ubah untuk mematikan PMPERMIT",
       "required": false,
-      "value": "DISABLE"
+      "value": "ENABLE"
     },    
     "API_HASH": {
       "description": "Api hash dari my.telegram.org/apps",
       "required": true
     },
     "SUDO_USERS": {
-      "description": "Daftar ID pengguna dihitung sebagai admin di mana-mana (jangan pake spasi yah).",
+      "description": "Daftar user ID Telegram pengguna dihitung sebagai admin di semua tempat (pemisah menggunakan space).",
       "required": true
     },
     "DURATION_LIMIT": {
-      "description": "Batas durasi audio maksimum untuk unduhan (per menit).",
+      "description": "Batas durasi audio maksimum untuk download (minutes).",
       "required": true,
       "value": "30"
     }
