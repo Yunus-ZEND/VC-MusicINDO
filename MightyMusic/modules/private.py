@@ -1,10 +1,10 @@
-# Creator by Yunus Zend
+# Creator by Stereo Music Project
 
 import logging
-from MightyMusic.modules.msg import Messages as tr
+from StereoMusic.modules.msg import Messages as tr
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
-from MightyMusic.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,SUPPORT_CHANNEL,BOT_USERNAME,OWNER_USERNAME
+from StereoMusic.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,SUPPORT_CHANNEL,BOT_USERNAME,OWNER_USERNAME
 logging.basicConfig(level=logging.INFO)
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['start']))
@@ -16,16 +16,15 @@ def _start(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "📝 Tambahkan saya ke group", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+                        "🎛 Tambahkan saya ke group", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
                 [
                     InlineKeyboardButton(
-                        "📮 Channel", url=f"https://t.me/{SUPPORT_CHANNEL}"), 
+                        "🔊 Channel", url=f"https://t.me/{SUPPORT_CHANNELdownload.                  InlineKeyboardButton(
+                        "📍 Group", url=f"https://t.me/{SUPPORT_GROUP}"),
                     InlineKeyboardButton(
-                        "🏷 Group", url=f"https://t.me/{SUPPORT_GROUP}"),
-                    InlineKeyboardButton(
-                        "✏️ Owner", url=f"https://t.me/{OWNER_USERNAME}")
-                ]
-            ]
+                        "📩 Instagram", url=f"https://insragram.com/ariasinathrya?utm_medium=copy_link")
+                ]   InlineKeyboardButton(
+            ]           "☕ Founder", url=f"https://t.me/SilenceSpe4ks")
         ),
         reply_to_message_id=message.message_id
         )
@@ -38,7 +37,7 @@ async def gstart(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🏷 Owner Bot", url=f"https://t.me/{OWNER_USERNAME}"
+                        "☕ Owner Bot", url=f"https://t.me/{OWNER_USERNAME}"
                     )
                 ]
             ]
@@ -78,12 +77,12 @@ def map(pos):
     elif(pos==len(tr.HELP_MSG)-1):
         url = f"https://t.me/{SUPPORT_GROUP}"
         button = [
-            [InlineKeyboardButton("📝 Tambahkan saya ke group", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
-            [InlineKeyboardButton(text = '📮 Channel', url=f"https://t.me/{SUPPORT_CHANNEL}"),
-             InlineKeyboardButton(text = '🏷 Group', url=f"https://t.me/{SUPPORT_GROUP}")],
-            [InlineKeyboardButton(text = '💡 Owner Bot', url=f"https://t.me/{OWNER_USERNAME}"),
-             InlineKeyboardButton(text = '✏️ Owner Project', url=f"https://t.me/ZendYNS")],
-            [InlineKeyboardButton(text = 'Kembali', callback_data = f"help+{pos-1}")]
+            [InlineKeyboardButton("➕ Tambahkan saya ke group ✅", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+            [InlineKeyboardButton(text = '🔊 Channel Updates', url=f"https://t.me/{SUPPORT_CHANNEL}"),
+             InlineKeyboardButton(text = '🎛 Group Support', url=f"https://t.me/{SUPPORT_GROUP}")],
+            [InlineKeyboardButton(text = '🎙 Owner Bot', url=f"https://t.me/{OWNER_USERNAME}"),
+             InlineKeyboardButton(text = '☕ Created by', url=f"https://t.me/SilenceSpe4ks")],
+            [InlineKeyboardButton(text = '↩ Kembali', callback_data = f"help+{pos-1}")]
         ]
     else:
         button = [
@@ -97,12 +96,28 @@ def map(pos):
 @Client.on_message(filters.command("help") & ~filters.private & ~filters.channel)
 async def ghelp(_, message: Message):
     await message.reply_text(
-        f"""**📝 Hallo!! Saya bisa memutar musik baik itu di VC Group atau VC Channel.**""",
+        f"""**<b>Hallo👋 {message.from_user.first_name} saya adalah {PROJECT_NAME}\n
+Saya Adalah Bot Music Group, Yang Dapat Memutar Lagu Di Voice Chat Group Anda Dengan Mudah
+Saya Memiliki Banyak Fitur Seperti :
+•Memutar Musik.
+•Mendownload Lagu.
+•Mencari Lagu Yang Ingin Di putar Atau Di download.
+•Gunakan Perintah >>/help<< Untuk Mengetahui Fitur Lengkapnya
+
+🙏 Terimakasih Untuk : {OWNER}
+
+
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "📮 Klik disini untuk bantuan", url=f"https://t.me/{BOT_USERNAME}?start"
+                        "📲 Klik disini untuk bantuan", url=f"https://t.me/{BOT_USERNAME}?start"
+                     ),
+                     InlineKeyboardButton(
+                          "☕ Created by", url=f"https://t.me/SilenceSpe4ks"
+                     ),
+                     InlineKeyboardButton(
+                          "🎙 Group Support", url=f"https://t.me/luciddreaams"
                     )
                 ]
             ]
