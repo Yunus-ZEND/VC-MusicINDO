@@ -1,8 +1,8 @@
 <h1 align="centre">Stereo Musik Prjct📼</h1>
 
 ### A bot that can play music on Telegram Group and channel Voice Chat
-### Powered By [Riebot]
-(https://github.com/Riebot/StereoMusik)
+### Powered By [Riebot](https://github.com/Riebot/StereoMusik)
+
 ###Available On Telegram as @StereoMusik_bot
 
 ![Stereo Music Logo](https://telegra.ph/file/39978084594ada3dc4912.png)
@@ -10,7 +10,7 @@
 ### Channel Support ☕
 `
 Klik tombol di bawah untuk join ke group support kami`
-### [@infobotmusik]
+### [@infobotmusik](https://t.me/infobotmusik)
 
 ### String Session 💻
 `
