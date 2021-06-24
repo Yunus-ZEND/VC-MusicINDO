@@ -4,9 +4,14 @@
   "keywords": ["music", "voicechat", "telegram"],
   "repository": "https://github.com/Riebot/StereoMusik",
   "stack": "container",
-  "env": {
+  "buildpacks": [
+   {
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+   }
+   ],
+   "env": {
     "SESSION_NAME": {
-      "description": "Masukkan string sessions Pyrogram dan pilih P jangan T Yah!!",
+      "description": "Masukkan string sessions Pyrogram dan pilih (P) untuk assitan yg naik ke VCG
       "required": true
     },
     "OWNER_USERNAME": {
