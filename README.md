@@ -3,7 +3,7 @@
 ### A bot that can play music on Telegram Group and channel Voice Chat
 ### Powered By [Riebot](https://github.com/Riebot/StereoMusik)
 
-###Available On Telegram as @StereoMusik_bot(https://t.me/StereoMusik_bot)
+###Available On Telegram as [@StereoMusik_bot](https://t.me/StereoMusik_bot)
 
 ![Stereo Music Logo](https://telegra.ph/file/39978084594ada3dc4912.png)
 
