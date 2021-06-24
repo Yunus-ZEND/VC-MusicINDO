@@ -1,48 +1,43 @@
 {
-  "name": "Stereo MusicProject",
+  "name": "VC MusicProject",
   "description": "Bot Sumber Terbuka untuk memutar lagu di Obrolan Suara Grup Telegram Anda. Powered by PyTgCalls.",
   "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/Riebot/StereoMusik",
+  "repository": "https://github.com/Yunus-ZEND/VC-MusicINDO",
   "stack": "container",
-  "buildpacks": [
-   {
-    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-   }
-   ],
-   "env": {
+  "env": {
     "SESSION_NAME": {
-      "description": "Masukkan string sessions Pyrogram dan pilih (P) untuk assitan yg naik ke VCG
+      "description": "Masukkan string sessions pilih P jangan T!!",
       "required": true
     },
-    "OWNER": {
-      "description": "Masukan Nama Anda Atau Username Telegram Anda",
+    "OWNER_USERNAME": {
+      "description": "Masukin Username Pemilik!! Bukan Username Asisten tapi kalo misalnya pake 1 akun yg jadi pemilik skaligus asisten yah gkpapa lah (usernamenya tanpa menggunakan tanda @).",
       "required": true
     },
     "BOT_TOKEN": {
-      "description": "Masukan Bot token dari @BotFather",
+      "description": "Bot token dari @BotFather",
       "required": true
     },
     "BOT_USERNAME": {
-      "description": "Masukin Username Bot kamu tanpa menggunakan @",
+      "description": "Username Bot kamu tanpa menggunakan @",
       "required": true
     },
     "BOT_NAME": {
-      "description": "Masukin Nama bot musik kamu.",
+      "description": "Nama bot musik kamu.",
       "required": false,
       "value": ""
     },
     "SUPPORT_GROUP": {
-      "description": "Group dukungan MusicPlayer anda tanpa @ [skip ini jika Anda tidak punya]",
+      "description": "Group support untuk bot musik milikmu tanpa menggunakan @ [kalo ga ada skip aja, gkpapa kok]",
       "required": false,
-      "value": "luciddreaams"
+      "value": "KingUserbotSupport"
     },
     "PROJECT_NAME": {
-      "description": "Nama proyek MusicPlayer Anda.",
+      "description": "Nama untuk project musik milikmu.",
       "required": false,
-      "value": "Stereo Music Project"
+      "value": "MightyMusic Project"
     },
     "ASSISTANT_NAME": {
-      "description": "Masukin Nama assisten untuk bot musik kamu tanpa menggunakan @.",
+      "description": "Nama assisten untuk bot musik mu tanpa menggunakan @.",
       "required": true
     },
     "ARQ_API_KEY": {
@@ -51,36 +46,36 @@
       "value": "VBPAOK-QOYCCP-DRLUBP-NALUFQ-ARQ"
     },    
     "BG_IMAGE": {
-      "description": "Custom Background Play Musik Dan Gunakan Foto Yang Transparant Dengan Format .png Atau .jpg ",
+      "description": "Background untuk bot musik kamu (Anda bisa menggunakan BG transparan) kalo ga ada biarin aja biar pake background buatan aku :v [IGNORE].",
       "required": false,
-      "value": "https://telegra.ph/file/39978084594ada3dc4912.jpg"
+      "value": "https://telegra.ph/file/27106d0e7ab86b2d0a929.png"
     },     
-    "UPDATE_CHANNEL": {
-      "description": "Update Channel tanpa @ [Skip ini jika Anda tidak punya].",
+    "SUPPORT_CHANNEL": {
+      "description": "Isi username Channel bebas tanpa menggunakan @ [Kalo gapunya biarin aja jangan diganti, gkpapa kok].",
       "required": false,
-      "value": "infobotmusik"
+      "value": "indoinfobot"
     },    
     "API_ID": {
       "description": "App ID dari my.telegram.org/apps",
       "required": true
     },
     "PMPERMIT": {
-      "description": "Ubah untuk mematikan PMPERMIT",
+      "description": "ENABLE untuk menghidupkan, DISABLE untuk mematikan",
       "required": false,
-      "value": "ENABLE"
+      "value": "DISABLE"
     },    
     "API_HASH": {
       "description": "Api hash dari my.telegram.org/apps",
       "required": true
     },
     "SUDO_USERS": {
-      "description": "Daftar user ID Telegram pengguna dihitung sebagai admin di semua tempat (pemisah menggunakan space).",
+      "description": "Daftar ID pengguna dihitung sebagai admin di mana-mana (jangan pake spasi yah).",
       "required": true
     },
     "DURATION_LIMIT": {
-      "description": "Batas durasi audio maksimum untuk download (minutes).",
+      "description": "Batas durasi audio maksimum untuk unduhan (per menit).",
       "required": true,
-      "value": "30"
+      "value": "10"
     }
   }
 }
