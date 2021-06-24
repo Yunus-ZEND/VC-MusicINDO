@@ -1,5 +1,4 @@
-# Creator by Yunus Zend
-# jangan recode atau reclone, usaha :)
+# Creator by StereoMusic Project
 
 import json
 import os
@@ -19,24 +18,24 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from Python_ARQ import ARQ
 from youtube_search import YoutubeSearch
 
-from MightyMusic.config import ARQ_API_KEY, ASSISTANT_NAME
-from MightyMusic.config import BOT_NAME as bn
-from MightyMusic.config import DURATION_LIMIT
-from MightyMusic.config import SUPPORT_CHANNEL as updateschannel
-from MightyMusic.config import OWNER_USERNAME as own
-from MightyMusic.config import que
-from MightyMusic.function.admins import admins as a
-from MightyMusic.helpers.admins import get_administrators
-from MightyMusic.helpers.channelmusic import get_chat_id
-from MightyMusic.helpers.errors import DurationLimitError
-from MightyMusic.helpers.decorators import errors
-from MightyMusic.helpers.decorators import authorized_users_only
-from MightyMusic.helpers.filters import command, other_filters
-from MightyMusic.helpers.gets import get_file_name
-from MightyMusic.services.callsmusic import callsmusic, queues
-from MightyMusic.services.callsmusic.callsmusic import client as USER
-from MightyMusic.services.converter.converter import convert
-from MightyMusic.services.downloaders import youtube
+from StereoMusic.config import ARQ_API_KEY, ASSISTANT_NAME
+from StereoMusic.config import BOT_NAME as bn
+from StereoMusic.config import DURATION_LIMIT
+from StereoMusic.config import SUPPORT_CHANNEL as updateschannel
+from StereoMusic.config import OWNER_USERNAME as own
+from StereoMusic.config import que
+from StereoMusic.function.admins import admins as a
+from StereoMusic.helpers.admins import get_administrators
+from StereoMusic.helpers.channelmusic import get_chat_id
+from StereoMusic.helpers.import DurationLimitError
+from StereoMusic.helpers.decorators import errors
+from StereoMusic.helpers.decorators import authorized_users_only
+from StereoMusic.helpers.filters import command, other_filters
+from StereoMusic.helpers.gets import get_file_name
+from StereoMusic.services.callsmusic import callsmusic, queues
+from StereoMusic.services.callsmusic.callsmusic import client as USER
+from StereoMusic.services.converter.converter import convert
+from StereoMusic.services.downloaders import youtube
 
 aiohttpsession = aiohttp.ClientSession()
 chat_id = None
@@ -171,15 +170,15 @@ def r_ply(type_):
     mar = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("⏹", "tutup"),
-                InlineKeyboardButton("⏸", "Jeda"),
-                InlineKeyboardButton("▶️", "Lanjut"),
+                InlineKeyboardButton("⏹", "close"),
+                InlineKeyboardButton("⏸", "pause"),
+                InlineKeyboardButton("▶️", "resume"),
                 InlineKeyboardButton("⏭", "skip"),
             ],
             [
                 InlineKeyboardButton("Playlist 📖", "playlist"),
             ],
-            [InlineKeyboardButton("❌ Tutup", "cls")],
+            [InlineKeyboardButton("❎ close", "cls")],
         ]
     )
     return mar
@@ -340,15 +339,15 @@ async def m_cb(b, cb):
         marr = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("⏹", "tutup"),
-                    InlineKeyboardButton("⏸", "jeda"),
-                    InlineKeyboardButton("▶️", "lanjut"),
+                    InlineKeyboardButton("⏹", "close"),
+                    InlineKeyboardButton("⏸", "pause"),
+                    InlineKeyboardButton("▶️", "resume"),
                     InlineKeyboardButton("⏭", "skip"),
                 ],
                 [
                     InlineKeyboardButton("Playlist 📖", "playlist"),
                 ],
-                [InlineKeyboardButton("🗑 Tutup", "cls")],
+                [InlineKeyboardButton("❎ close", "cls")],
             ]
         )
         await cb.message.edit(stats, reply_markup=marr)
@@ -447,7 +446,7 @@ async def play(_, message: Message):
     message.from_user.id
     message.from_user.first_name
     text_links=None
-    await lel.edit("🔎 **Sedang mencari lagu tersebut**")
+    await lel.edit("🔎 **Sedang mencari lagu**")
     message.from_user.id
     if message.reply_to_message:
         entities = []
@@ -484,12 +483,12 @@ async def play(_, message: Message):
                     InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                     InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
                 ],
-                [InlineKeyboardButton(text="🗑 Tutup", callback_data="cls")],
+                [InlineKeyboardButton(text="❎ close", callback_data="cls")],
             ]
         )
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/f6086f8909fbfeb0844f2.png"
+        thumb_name = "https://telegra.ph/file/39978084594ada3dc4912.png"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -502,7 +501,7 @@ async def play(_, message: Message):
         )
     elif urls:
         query = toxt
-        await lel.edit("🎵 **Sedang Memproses**")
+        await lel.edit("🎶 **Sedang Memproses lagu**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -519,7 +518,7 @@ async def play(_, message: Message):
 
         except Exception as e:
             await lel.edit(
-                "Lagu tidak ditemukan. Coba lagu lain atau mungkin mengejanya dengan benar."
+                "Lagu tidak ditemukan. Coba cari lagu lain dan ketik dengan benar."
             )
             print(str(e))
             return
@@ -533,9 +532,9 @@ async def play(_, message: Message):
                     InlineKeyboardButton(text="Owner", url=f"https://t.me/{own}"),
                 ],
                 [
-                    InlineKeyboardButton(text="Update", url=f"https://t.me/Indoinfobot"),
-                    InlineKeyboardButton(text="Tutup", callback_data="cls")
-                ],
+                    InlineKeyboardButton(text="🔊 Update", url=f"https://t.me/infobotmusik"),
+                    InlineKeyboardButton(text="❎ Close", callback_data="cls")
+                ],  InlineKeyboardButton(text="☕ Created", url=f"https://t.me/SilenceSpe4ks"),
             ]
         )
         requested_by = message.from_user.first_name
@@ -546,7 +545,7 @@ async def play(_, message: Message):
         for i in message.command[1:]:
             query += " " + str(i)
         print(query)
-        await lel.edit("🎵 **Memproses Lagu**")
+        await lel.edit("🎵 **Sedang Memproses Lagu**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -563,7 +562,7 @@ async def play(_, message: Message):
 
         except Exception as e:
             await lel.edit(
-                "Lagu tidak ditemukan.Coba eja dengan benar atau cari lagu lain."
+                "Lagu tidak ditemukan.Coba ketik dengan benar atau cari lagu lain saja."
             )
             print(str(e))
             return
@@ -577,9 +576,9 @@ async def play(_, message: Message):
                     InlineKeyboardButton(text="Owner", url=f"https://t.me/{own}"),
                 ],
                 [
-                    InlineKeyboardButton(text="Update", url=f"https://t.me/Indoinfobot"),
-                    InlineKeyboardButton(text="Tutup", callback_data="cls")
-                ],
+                    InlineKeyboardButton(text="🔊 Update Channel", url=f"https://t.me/infobotmusik"),
+                    InlineKeyboardButton(text="❎ Close", callback_data="cls")
+                ],  InlineKeyboardButton(text="☕ Created", url=f"https://t.me/SilenceSpe4ks"),
             ]
         )
         requested_by = message.from_user.first_name
@@ -597,8 +596,8 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption = f"🏷 **Judul:** [{title[:23]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
-                    + f"🎧 **Request Dari: **{requested_by}".format(
+            caption = f"🎶 **Judul:** [{title[:23]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
+                    + f"🎙 **Request Dari: **{requested_by}".format(
         message.from_user.mention()
         ),    
     )
@@ -621,8 +620,8 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption = f"🏷 **Judul:** [{title[:23]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Sedang dimainkan\n" \
-                    + f"🎧 **Request Dari: **{requested_by}".format(
+            caption = f"🎶 **Judul:** [{title[:23]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Sedang dimainkan\n" \
+                    + f"🎙 **Request Dari: **{requested_by}".format(
         message.from_user.mention()
         ),
     )
@@ -633,13 +632,13 @@ async def play(_, message: Message):
 @Client.on_message(filters.command("dplay") & filters.group & ~filters.edited)
 async def deezer(client: Client, message_: Message):
     global que
-    lel = await message_.reply("🔄 **Memproses Lagu tersebut**")
+    lel = await message_.reply("🔄 **Sedang Memproses Lagu**")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "MightyMusic"
+        user.first_name = "StereoMusik"
     usar = user
     wew = usar.id
     try:
@@ -702,7 +701,7 @@ async def deezer(client: Client, message_: Message):
         url = songs.result[0].url
         artist = songs.result[0].artist
         duration = songs.result[0].duration
-        thumbnail = "https://telegra.ph/file/f6086f8909fbfeb0844f2.png"
+        thumbnail = "https://telegra.ph/file/39978084594ada3dc4912.png"
 
     except:
         await res.edit("Ditemukan Secara harfiah Tidak Ada , Anda Harus Belajar English!")
@@ -713,9 +712,9 @@ async def deezer(client: Client, message_: Message):
                 InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                 InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
             ],
-            [InlineKeyboardButton(text="Dengarkan melalui Deezer 🎬", url=f"{url}")],
-            [InlineKeyboardButton(text="🗑 Tutup", callback_data="cls")],
-        ]
+            [InlineKeyboardButton(text="Dengarkan melalui Deezer 📼", url=f"{url}")],
+            [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+            [InlineKeyboardButton(text="☕ Created", url=f"https://t.me/SilenceSpe4ks")],
     )
     file_path = await convert(wget.download(url))
     await res.edit("Generating Thumbnail")
@@ -761,7 +760,7 @@ async def deezer(client: Client, message_: Message):
 @Client.on_message(filters.command("splay") & filters.group & ~filters.edited)
 async def jiosaavn(client: Client, message_: Message):
     global que
-    lel = await message_.reply("🔄 **Memproses Lagu**")
+    lel = await message_.reply("🔄 **Sedang Memproses Lagu**")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
@@ -839,13 +838,13 @@ async def jiosaavn(client: Client, message_: Message):
             [
                 InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                 InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
-            ],
+            ],  InlineKeyboardButton("☕ Created", url=f"https://t.me/SilenceSpe4ks"),
             [
                 InlineKeyboardButton(
-                    text="Join Updates Channel", url=f"https://t.me/{updateschannel}"
+                    text="🔊 Updates Channel", url=f"https://t.me/infobotmusik"),
                 )
             ],
-            [InlineKeyboardButton(text="🗑 Tutup", callback_data="cls")],
+            [InlineKeyboardButton(text="❎ Close", callback_data="cls")],
         ]
     )
     file_path = await convert(wget.download(slink))
@@ -893,4 +892,3 @@ async def jiosaavn(client: Client, message_: Message):
 
 
 # Have u read all. If read RESPECT :-)
-# Edit bahasa by Apis :)
