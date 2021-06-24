@@ -1,43 +1,43 @@
 {
-  "name": "VC MusicProject",
+  "name": "Stereo MusicProject",
   "description": "Bot Sumber Terbuka untuk memutar lagu di Obrolan Suara Grup Telegram Anda. Powered by PyTgCalls.",
   "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/Yunus-ZEND/VC-MusicINDO",
+  "repository": "https://github.com/Riebot/StereoMusik",
   "stack": "container",
   "env": {
     "SESSION_NAME": {
-      "description": "Masukkan string sessions pilih P jangan T!!",
+      "description": "Masukkan string sessions Pyrogram dan pilih P jangan T Yah!!",
       "required": true
     },
     "OWNER_USERNAME": {
-      "description": "Masukin Username Pemilik!! Bukan Username Asisten tapi kalo misalnya pake 1 akun yg jadi pemilik skaligus asisten yah gkpapa lah (usernamenya tanpa menggunakan tanda @).",
+      "description": "Masukin Username kamu Atau Username Telegram mu",
       "required": true
     },
     "BOT_TOKEN": {
-      "description": "Bot token dari @BotFather",
+      "description": "Ambil Bot token dari @BotFather",
       "required": true
     },
     "BOT_USERNAME": {
-      "description": "Username Bot kamu tanpa menggunakan @",
+      "description": "Masukin Username Bot kamu tanpa menggunakan @",
       "required": true
     },
     "BOT_NAME": {
-      "description": "Nama bot musik kamu.",
+      "description": "Masukin Nama bot musik kamu.",
       "required": false,
       "value": ""
     },
     "SUPPORT_GROUP": {
-      "description": "Group support untuk bot musik milikmu tanpa menggunakan @ [kalo ga ada skip aja, gkpapa kok]",
+      "description": "Group support untuk bot musik punya kamu tanpa menggunakan @ [kalo ga ada skip aja, gak masalah]",
       "required": false,
-      "value": "KingUserbotSupport"
+      "value": "luciddreaams"
     },
     "PROJECT_NAME": {
-      "description": "Nama untuk project musik milikmu.",
+      "description": "Masukin Nama untuk project musik milikmu.",
       "required": false,
-      "value": "MightyMusic Project"
+      "value": "Stereo Music Project"
     },
     "ASSISTANT_NAME": {
-      "description": "Nama assisten untuk bot musik mu tanpa menggunakan @.",
+      "description": "Masukin Nama assisten untuk bot musik kamu tanpa menggunakan @.",
       "required": true
     },
     "ARQ_API_KEY": {
@@ -46,14 +46,14 @@
       "value": "VBPAOK-QOYCCP-DRLUBP-NALUFQ-ARQ"
     },    
     "BG_IMAGE": {
-      "description": "Background untuk bot musik kamu (Anda bisa menggunakan BG transparan) kalo ga ada biarin aja biar pake background buatan aku :v [IGNORE].",
+      "description": "Custom Background Play Musik Dan Gunakan Foto Yang Transparant Dengan Format .png Atau .jpg ",
       "required": false,
-      "value": "https://telegra.ph/file/27106d0e7ab86b2d0a929.png"
+      "value": "https://telegra.ph/file/39978084594ada3dc4912.png"
     },     
     "SUPPORT_CHANNEL": {
-      "description": "Isi username Channel bebas tanpa menggunakan @ [Kalo gapunya biarin aja jangan diganti, gkpapa kok].",
+      "description": "Isi username Channel bebas tanpa menggunakan @ [Skip aja klo kamu gak punya].",
       "required": false,
-      "value": "indoinfobot"
+      "value": "infobotmusik"
     },    
     "API_ID": {
       "description": "App ID dari my.telegram.org/apps",
@@ -75,7 +75,7 @@
     "DURATION_LIMIT": {
       "description": "Batas durasi audio maksimum untuk unduhan (per menit).",
       "required": true,
-      "value": "10"
+      "value": "60"
     }
   }
 }
