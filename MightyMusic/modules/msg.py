@@ -1,3 +1,11 @@
+# Copyright (C) 2021 Vc-MusicINDO Yunus-ZEND 
+#
+# Free Software Foundation, LICENSE GNU GPL v3.0 <https://github.com/Yunus-ZEND/MightyProject/blob/MightyProject/LICENSE>
+# Everyone is permitted to copy and distribute verbatim copies
+# of this license msg, but changing it is not allowed.
+#
+# Creator And Contributor
+
 import os
 from MightyMusic.config import ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,OWNER_USERNAME
 class Messages():
@@ -47,7 +55,7 @@ f"""
 • /current: Tampilkan sedang diputar
 • /playlist: Tampilkan daftar yang sedang diputar
 
-*Cmd player dan semua cmd lain kecuali /play, /current dan /playlist hanya untuk admin grup*
+__**Cmd player dan semua cmd lain kecuali**__ /play, /current __**dan**__ /playlist __**hanya untuk admin grup**__
 """,
         
 f"""
@@ -89,9 +97,11 @@ f"""
  • /userbotleaveall - Keluarkan asisten musik dari semua obrolan chat
  • /gcast <reply to message> - global brodcast membalas pesan ke semua obrolan
  • /pmpermit [on/off] - enable/disable pesan pmpermit 
-*Pengguna Sudo dapat menjalankan perintah apa pun di grup mana pun
+__Pengguna Sudo dapat menjalankan perintah apa pun di grup mana pun__
 
 ◎› Owner Project: [Yunus Zend](https://t.me/ZendYNS)
 
 """
       ]
+
+# Editor by Creator And Contributor
