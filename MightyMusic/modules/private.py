@@ -82,7 +82,7 @@ def map(pos):
             [InlineKeyboardButton(text = '📮 Channel', url=f"https://t.me/{SUPPORT_CHANNEL}"),
              InlineKeyboardButton(text = '🏷 Group', url=f"https://t.me/{SUPPORT_GROUP}")],
             [InlineKeyboardButton(text = '💡 Owner Bot', url=f"https://t.me/{OWNER_USERNAME}"),
-             InlineKeyboardButton(text = '✏️ Owner Project', url=f"https://t.me/ZendYNS")],
+             InlineKeyboardButton(text = '☕ Owner Project', url=f"https://t.me/SilenceSpe4ks")],
             [InlineKeyboardButton(text = 'Kembali', callback_data = f"help+{pos-1}")]
         ]
     else:
