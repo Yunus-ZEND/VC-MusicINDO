@@ -1,4 +1,10 @@
-# Creator by Yunus Zend
+# Copyright (C) 2021 Vc-MusicINDO Yunus-ZEND 
+#
+# Free Software Foundation, LICENSE GNU GPL v3.0 <https://github.com/Yunus-ZEND/MightyProject/blob/MightyProject/LICENSE>
+# Everyone is permitted to copy and distribute verbatim copies
+# of this license private, but changing it is not allowed.
+#
+# Creator And Contributor
 
 import logging
 from MightyMusic.modules.msg import Messages as tr
