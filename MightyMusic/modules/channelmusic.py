@@ -1,3 +1,7 @@
+# not work of license, this file is not working
+# 
+# this file is almost the same as play.py
+
 import json
 import os
 from os import path
