@@ -1,6 +1,11 @@
-# I get code from DaisyXMusic
-# Creator by Yunus Zend
-# Thanks Daisy for the cool project
+# Copyright (C) 2021 Vc-MusicINDO Yunus-ZEND 
+#
+# Free Software Foundation, LICENSE GNU GPL v3.0 <https://github.com/Yunus-ZEND/MightyProject/blob/MightyProject/LICENSE>
+# Everyone is permitted to copy and distribute verbatim copies
+# of this license ytsearch, but changing it is not allowed.
+#
+# Creator And Contributor 
+
 
 import logging
 
@@ -30,9 +35,9 @@ async def ytsearch(_, message: Message):
         i = 0
         text = ""
         while i < 4:
-            text += f"Title - {results[i]['title']}\n"
-            text += f"Duration - {results[i]['duration']}\n"
-            text += f"Views - {results[i]['views']}\n"
+            text += f"Judul - {results[i]['title']}\n"
+            text += f"Durasi - {results[i]['duration']}\n"
+            text += f"Dilihat - {results[i]['views']}\n"
             text += f"Channel - {results[i]['channel']}\n"
             text += f"https://youtube.com{results[i]['url_suffix']}\n\n"
             i += 1
