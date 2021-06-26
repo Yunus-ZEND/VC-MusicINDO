@@ -48,7 +48,7 @@
     "BG_IMAGE": {
       "description": "Background untuk bot musik kamu (Anda bisa menggunakan BG transparan) kalo ga ada biarin aja biar pake background buatan aku :v [IGNORE].",
       "required": false,
-      "value": "https://telegra.ph/file/27106d0e7ab86b2d0a929.png"
+      "value": "https://telegra.ph/file/22e0ea77281d18134fe5a.png"
     },     
     "SUPPORT_CHANNEL": {
       "description": "Isi username Channel bebas tanpa menggunakan @ [Kalo gapunya biarin aja jangan diganti, gkpapa kok].",
