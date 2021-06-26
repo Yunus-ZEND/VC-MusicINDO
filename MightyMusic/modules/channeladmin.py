@@ -1,3 +1,11 @@
+# Copyright (C) 2021 Vc-MusicINDO Yunus-ZEND 
+#
+# Free Software Foundation, LICENSE GNU GPL v3.0 <https://github.com/Yunus-ZEND/MightyProject/blob/MightyProject/LICENSE>
+# Everyone is permitted to copy and distribute verbatim copies
+# of this license channeladmin, but changing it is not allowed.
+#
+# Creator And Contributor
+
 from asyncio.queues import QueueEmpty
 from MightyMusic.config import que
 from pyrogram import Client, filters
@@ -20,16 +28,16 @@ async def pause(_, message: Message):
       conid = conchat.linked_chat.id
       chid = conid
     except:
-      await message.reply("Is chat even linked")
+      await message.reply("Apakah obrolan Anda terhubung?")
       return    
     chat_id = chid
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
         callsmusic.pytgcalls.active_calls[chat_id] == "paused"
     ):
-        await message.reply_text("❗ Nothing is playing!")
+        await message.reply_text("❗ Tidak ada yang bermain!")
     else:
         callsmusic.pytgcalls.pause_stream(chat_id)
-        await message.reply_text("▶️ Paused!")
+        await message.reply_text("▶️ Dijeda!")
 
 
 @Client.on_message(filters.command(["channelresume","cresume"]) & filters.group & ~filters.edited)
@@ -41,16 +49,16 @@ async def resume(_, message: Message):
       conid = conchat.linked_chat.id
       chid = conid
     except:
-      await message.reply("Is chat even linked")
+      await message.reply("Apakah obrolan Anda terhubung?")
       return    
     chat_id = chid
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
         callsmusic.pytgcalls.active_calls[chat_id] == "playing"
     ):
-        await message.reply_text("❗ Nothing is paused!")
+        await message.reply_text("❗ Tidak ada yang dijeda!")
     else:
         callsmusic.pytgcalls.resume_stream(chat_id)
-        await message.reply_text("⏸ Resumed!")
+        await message.reply_text("⏸ Dilanjutkan!")
 
 
 @Client.on_message(filters.command(["channelend","cend"]) & filters.group & ~filters.edited)
@@ -62,11 +70,11 @@ async def stop(_, message: Message):
       conid = conchat.linked_chat.id
       chid = conid
     except:
-      await message.reply("Is chat even linked")
+      await message.reply("Apakah obrolan Anda terhubung?")
       return    
     chat_id = chid
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗ Nothing is streaming!")
+        await message.reply_text("❗ Tidak ada yang streaming!")
     else:
         try:
             callsmusic.queues.clear(chat_id)
@@ -74,7 +82,7 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(chat_id)
-        await message.reply_text("❌ Stopped streaming!")
+        await message.reply_text("❌  Streaming di stop!")
 
 
 @Client.on_message(filters.command(["channelskip","cskip"]) & filters.group & ~filters.edited)
@@ -87,11 +95,11 @@ async def skip(_, message: Message):
       conid = conchat.linked_chat.id
       chid = conid
     except:
-      await message.reply("Is chat even linked")
+      await message.reply("Apakah obrolan Anda terhubung?")
       return    
     chat_id = chid
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗ Nothing is playing to skip!")
+        await message.reply_text("❗ Tidak ada yang bermain untuk dilewati!")
     else:
         callsmusic.queues.task_done(chat_id)
 
@@ -107,7 +115,7 @@ async def skip(_, message: Message):
         skip = qeue.pop(0)
     if not qeue:
         return
-    await message.reply_text(f"- Skipped **{skip[0]}**\n- Now Playing **{qeue[0][0]}**")
+    await message.reply_text(f"- Dilewati **{skip[0]}**\n- Sedang dimainkan **{qeue[0][0]}**")
 
 
 @Client.on_message(filters.command("channeladmincache"))
@@ -118,7 +126,7 @@ async def admincache(client, message: Message):
       conid = conchat.linked_chat.id
       chid = conid
     except:
-      await message.reply("Is chat even linked")
+      await message.reply("Apakah obrolan Anda terhubung?")
       return
     set(
         chid,
@@ -127,4 +135,4 @@ async def admincache(client, message: Message):
             for member in await conchat.linked_chat.get_members(filter="administrators")
         ],
     )
-    await message.reply_text("❇️ Admin cache refreshed!")
+    await message.reply_text("❇️ Cache admin disegarkan!")
