@@ -13,6 +13,7 @@ BOT_NAME = getenv("BOT_NAME")
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "IndoInfoBot")
 BG_IMAGE = getenv("BG_IMAGE", "https://telegra.ph/file/22e0ea77281d18134fe5a.png")
 admins = {}
+DEV_LIST = getenv("DEV_LIST", None)
 API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
 ARQ_API_KEY = getenv("ARQ_API_KEY", None)
