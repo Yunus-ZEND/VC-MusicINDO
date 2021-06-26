@@ -7,7 +7,7 @@
 # Creator And Contributor
 
 import os
-from MightyMusic.config import ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,OWNER_USERNAME
+from MightyMusic.config import ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,OWNER_USERNAME,DEV_LIST_1,DEV_LIST_2
 class Messages():
       START_MSG = "**Hallo [{}](tg://user?id={})!**\n━━━━━━━━━━━━━━━━━━━━━━━━\n📮 Saya adalah bot canggih yang dibuat untuk memutar musik di obrolan suara Grup & Saluran Channel Telegram.\n\n📝 Ketik /help untuk mendapat info dari saya.\n━━━━━━━━━━━━━━━━━━━━━━━━\n🎻 Selamat menikmati sensasi mendengarkan musik di VC GROUP/ CHANNEL kamu."
       HELP_MSG = [
@@ -100,6 +100,16 @@ f"""
 __Pengguna Sudo dapat menjalankan perintah apa pun di grup mana pun__
 
 ◎› Owner Project: [Yunus Zend](https://t.me/ZendYNS)
+
+""",
+
+f"""
+**◎› Daftar Developer Project {PROJECT_NAME} Kami
+
+--> {DEV_LIST_1}
+--> {DEV_LIST_2}
+
+__Terimakasih Sudah Menggunakan Music Project Kami, Selamat Bersenang Senang!__
 
 """
       ]
