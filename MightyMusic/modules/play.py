@@ -1,5 +1,10 @@
-# Creator by Yunus Zend
-# jangan recode atau reclone, usaha :)
+# Copyright (C) 2021 Vc-MusicINDO Yunus-ZEND 
+#
+# Free Software Foundation, LICENSE GNU GPL v3.0 <https://github.com/Yunus-ZEND/MightyProject/blob/MightyProject/LICENSE>
+# Everyone is permitted to copy and distribute verbatim copies
+# of this license play, but changing it is not allowed.
+#
+# Creator And Contributor
 
 import json
 import os
@@ -891,6 +896,5 @@ async def jiosaavn(client: Client, message_: Message):
     )
     os.remove("final.png")
 
-
-# Have u read all. If read RESPECT :-)
-# Edit bahasa by Apis :)
+# MightyProject, hati hati dalam mengclone repo ini, karena ada copyright kami :)
+# Untuk Kamu Jangan Sesekali Mengganti Copyright Orang, Artinya Lu Gak Kreatif hahaha :"
