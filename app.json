@@ -36,16 +36,6 @@
       "required": false,
       "value": "MightyMusic Project"
     },
-    "DEV_LIST_1": {
-      "description": "Isi Username Telegram Anda Dengan @ (Untuk Mengisi Daftar Developer 1).",
-      "required": false,
-      "value": "@ZendYNS"
-    },
-    "DEV_LIST_2": {
-      "description": "Isi Username Telegram Anda Dengan @ (Untuk Mengisi Daftar Developer 2)",
-      "required": false,
-      "value": "@PacarFerdilla"
-    },
     "ASSISTANT_NAME": {
       "description": "Nama assisten untuk bot musik mu tanpa menggunakan @.",
       "required": true
