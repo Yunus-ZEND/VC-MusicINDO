@@ -100,14 +100,8 @@ f"""
 __Pengguna Sudo dapat menjalankan perintah apa pun di grup mana pun__
 
 ◎› Owner Project: [Yunus Zend](https://t.me/ZendYNS)
-
-""",
-
-f"""
-__Terimakasih Sudah Menggunakan Music Project Kami, Selamat Bersenang Senang!__
-Thank you for [Yunus Zend](https://t.me/ZendYNS) and [Apis](https://t.me/PacarFerdilla)
-
 ◎› Source Code: [Click Here](https://github.com/Yunus-ZEND/VC-MusicINDO)
+
 """
       ]
 
