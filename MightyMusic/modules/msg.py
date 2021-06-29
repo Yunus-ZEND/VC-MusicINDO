@@ -95,7 +95,7 @@ f"""
 **◎› 📝 Command Khusus buat pengguna sudo**
 
  • /userbotleaveall - Keluarkan asisten musik dari semua obrolan chat
- • /gcast <reply to message> - global brodcast membalas pesan ke semua obrolan
+ • /broadcast <balas ke pesan> - global brodcast membalas pesan ke semua obrolan
  • /pmpermit [on/off] - enable/disable pesan pmpermit 
 __Pengguna Sudo dapat menjalankan perintah apa pun di grup mana pun__
 
