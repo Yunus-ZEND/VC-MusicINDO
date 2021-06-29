@@ -290,7 +290,7 @@ async def m_cb(b, cb):
             await cb.answer("Obrolan tidak terhubung!", show_alert=True)
         else:
             callsmusic.pytgcalls.resume_stream(chet_id)
-            await cb.answer("Music Dilanjutkan!")
+            await cb.answer("Musik Dilanjutkan!")
             await cb.message.edit(
                 updated_stats(m_chat, qeue), reply_markup=r_ply("pause")
             )
@@ -456,7 +456,8 @@ async def play(_, message: Message):
     message.from_user.id
     if message.reply_to_message:
         entities = []
-        toxt = message.reply_to_message.text or message.reply_to_message.caption
+        toxt = message.reply_to_message.text \
+              or message.reply_to_message.caption
         if message.reply_to_message.entities:
             entities = message.reply_to_message.entities + entities
         elif message.reply_to_message.caption_entities:
@@ -508,7 +509,7 @@ async def play(_, message: Message):
     elif urls:
         query = toxt
         await lel.edit("🎵 **Sedang Memproses**")
-        ydl_opts = {"format": "bestaudio[ext=m4a]"}
+        ydl_opts = {"format": "bestaudio/best"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
             url = f"https://youtube.com{results[0]['url_suffix']}"
@@ -552,7 +553,7 @@ async def play(_, message: Message):
             query += " " + str(i)
         print(query)
         await lel.edit("🎵 **Memproses Lagu**")
-        ydl_opts = {"format": "bestaudio[ext=m4a]"}
+        ydl_opts = {"format": "bestaudio/best"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
             url = f"https://youtube.com{results[0]['url_suffix']}"
