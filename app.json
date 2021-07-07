@@ -40,7 +40,7 @@
       "description": "Nama assisten untuk bot musik mu tanpa menggunakan @.",
       "required": true
     },
-    "START_TEXT" {
+    "START_TEXT": {
       "description": "Isi pesan bot project anda , untuk start pada bot",
       "required": true
     },
