@@ -42,7 +42,7 @@
     },
     "START_TEXT" {
       "description": "Isi pesan bot project anda , untuk start pada bot",
-      "required": false,
+      "required": true
     },
     "ARQ_API_KEY": {
       "description": "dapatkan dari @ARQRobot.",
