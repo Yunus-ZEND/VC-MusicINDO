@@ -9,8 +9,7 @@
 import os
 from MightyMusic.config import ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,OWNER_USERNAME,START_TEXT
 class Messages():
-      MESSAGE_TEXT = str(START_TEXT) if START_TEXT else f"**Hallo [{}](tg://user?id={})!**\n━━━━━━━━━━━━━━━━━━━━━━━━\n📮 Saya adalah bot canggih yang dibuat untuk memutar musik di obrolan suara Grup & Saluran Channel Telegram.\n\n📝 Ketik /help untuk mendapat info dari saya.\n━━━━━━━━━━━━━━━━━━━━━━━━\n🎻 Selamat menikmati sensasi mendengarkan musik di VC GROUP/ CHANNEL Kamu"
-      START_MSG = f" {MESSAGE_TEXT} "
+      START_MSG = "**Hallo [{}](tg://user?id={})!**\n━━━━━━━━━━━━━━━━━━━━━━━━\n📮 Saya adalah bot canggih yang dibuat untuk memutar musik di obrolan suara Grup & Saluran Channel Telegram.\n\n📝 Ketik /help untuk mendapat info dari saya.\n━━━━━━━━━━━━━━━━━━━━━━━━\n🎻 Selamat menikmati sensasi mendengarkan musik di VC GROUP/ CHANNEL Kamu"
       HELP_MSG = [
         ".",
 f"""
