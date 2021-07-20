@@ -1,3 +1,3 @@
-from MightyMusic.services.queues.queues import clear, get, is_empty, put, task_done
+from MightyMusic.services.callsmusic.queues.queues import clear, get, is_empty, put, task_done
 
 __all__ = ["clear", "get", "is_empty", "put", "task_done"]
