@@ -1,9 +1,9 @@
 {
-  "name": "VC MusicProject",
+  "name": "VIR MUSIC INDO BOT",
   "description": "Bot Sumber Terbuka untuk memutar lagu di Obrolan Suara Grup Telegram Anda. Powered by PyTgCalls.",
-  "logo": "https://telegra.ph/file/7840c853d210afebf2490.jpg",
+  "logo": "https://telegra.ph/file/b1e5da058a63a52ec8265.png",
   "keywords": ["music", "vc-musicindo", "voicechat", "telegram"],
-  "repository": "https://github.com/Yunus-ZEND/VC-MusicINDO",
+  "repository": "https://github.com/farizjr1/VIR-MUSIC-INDO",
   "stack": "container",
   "env": {
     "SESSION_NAME": {
@@ -30,12 +30,12 @@
     "SUPPORT_GROUP": {
       "description": "Group support untuk bot musik milikmu tanpa menggunakan @ [kalo ga ada skip aja, gkpapa kok]",
       "required": false,
-      "value": "KingUserbotSupport"
+      "value": "MusicVirGroup"
     },
     "PROJECT_NAME": {
       "description": "Nama untuk project musik milikmu.",
       "required": false,
-      "value": "MightyMusic Project"
+      "value": "VIR PROJECT"
     },
     "ASSISTANT_NAME": {
       "description": "Nama assisten untuk bot musik mu tanpa menggunakan @.",
@@ -49,12 +49,12 @@
     "BG_IMAGE": {
       "description": "Background untuk bot musik kamu (Anda bisa menggunakan BG transparan) kalo ga ada biarin aja biar pake background buatan aku :v [IGNORE].",
       "required": false,
-      "value": "https://telegra.ph/file/22e0ea77281d18134fe5a.png"
+      "value": "https://telegra.ph/file/b1e5da058a63a52ec8265.png"
     },     
     "SUPPORT_CHANNEL": {
       "description": "Isi username Channel bebas tanpa menggunakan @ [Kalo gapunya biarin aja jangan diganti, gkpapa kok].",
       "required": false,
-      "value": "indoinfobot"
+      "value": "musicvirchannel"
     },    
     "API_ID": {
       "description": "App ID dari my.telegram.org/apps",
