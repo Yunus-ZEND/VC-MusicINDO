@@ -19,7 +19,7 @@ f"""
 
 ⚪️ Nama Asisten >> @{ASSISTANT_NAME}\n\nKlik tombol dibawah untuk melihat intruksi lain**
 ◎› Owner Bot >> @{OWNER_USERNAME}
-◎› Owner Project >> @ZendYNS
+◎› Owner Project >> @farizjlr
 """,
 
 f"""
@@ -99,8 +99,8 @@ f"""
  • /pmpermit [on/off] - enable/disable pesan pmpermit 
 __Pengguna Sudo dapat menjalankan perintah apa pun di grup mana pun__
 
-◎› Owner Project: [Yunus Zend](https://t.me/ZendYNS)
-◎› Source Code: [Click Here](https://github.com/Yunus-ZEND/VC-MusicINDO)
+◎› Owner Project: [Yunus Zend](https://t.me/farizjlr)
+◎› Source Code: [Click Here](https://github.com/farizjr1/VIR-MUSIC-INDO)
 
 """
       ]
