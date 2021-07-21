@@ -1,6 +1,5 @@
-<a href="https://cooltext.com"><img src="https://images.cooltext.com/5533766.gif" width="802" height="96" alt="King Userbot" /></a>
-
-**_Join [Channel Update](https://t.me/indoinfobot) untuk melihat info seputar bot_**
+<a href="https://cooltext.com"><img src="https://images.cooltext.com/5542413.gif" width="569" height="91" alt="VIR MUSIC BOT" /></a>
+**_Join [Channel Update](https://t.me/MusicVirChannel) untuk melihat info seputar bot_**
 
 <p align="left">
   <a href="https://github.com/Yunus-ZEND/VC-MusicINDO/fork">
@@ -16,12 +15,12 @@
 
 #### NOTE: Tolong jangan di clone, capek editnya :") Kalo mau silahkan fork aja.
 
-![VC Music Logo](https://telegra.ph/file/d8e9534a07418917c04cd.jpg)
+![VC Music Logo](https://telegra.ph/file/b1e5da058a63a52ec8265.png)
 
 ### Group Support 🇮🇩
 `
 Klik tombol di bawah untuk join ke group support kami`
-   <a href="https://t.me/KingUserbotSupport"><img src="https://img.shields.io/badge/Grup%20Support%3F-Klik Disini-yellow?&style=flat-square?&logo=telegram" width=165px></a></p>
+   <a href="https://t.me/MusicVirGroup"><img src="https://img.shields.io/badge/Grup%20Support%3F-Klik Disini-yellow?&style=flat-square?&logo=telegram" width=165px></a></p>
 
 ### String Session 🖇
 `
@@ -34,7 +33,7 @@ Klik tombol dibawah untuk deploy VC MusicINDO`
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Yunus-ZEND/VC-MusicINDO)
 
-![addphoto](https://telegra.ph/file/8218eb6dceae195b9fb6f.jpg)
+![addphoto](-)
 
 ### Command yang tersedia 🚀
 
