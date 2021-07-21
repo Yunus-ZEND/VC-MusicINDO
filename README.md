@@ -15,7 +15,7 @@
 
 #### NOTE: Tolong jangan di clone, capek editnya :") Kalo mau silahkan fork aja.
 
-![VC Music Logo](https://telegra.ph/file/b1e5da058a63a52ec8265.png)
+![VIR MUSIC INDO LOGO](https://telegra.ph/file/b1e5da058a63a52ec8265.png)
 
 ### Group Support 🇮🇩
 `
@@ -27,9 +27,9 @@ Klik tombol di bawah untuk join ke group support kami`
 Klik tombol Run on repl.it untuk membuat string milikmu, tolong pilih P yah jangan T`
    [![Run on Repl.it](https://repl.it/badge/github/STARKGANG/friday)](https://replit.com/@apisuserbot/String-Session?v=1)
 
-### <p align="left">DEPLOY VC-MUSIKINDO ♫</p>
+### <p align="left">DEPLOY VIR MUSIC INDO BOT ♫</p>
 `
-Klik tombol dibawah untuk deploy VC MusicINDO`
+Klik tombol dibawah untuk deploy VIR MUSIC INDO BOT`
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Yunus-ZEND/VC-MusicINDO)
 
