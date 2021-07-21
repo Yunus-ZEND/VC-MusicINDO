@@ -31,7 +31,7 @@ Klik tombol Run on repl.it untuk membuat string milikmu, tolong pilih P yah jang
 `
 Klik tombol dibawah untuk deploy VIR MUSIC INDO BOT`
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Yunus-ZEND/VC-MusicINDO)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/farizjr1/VIR-MUSIC-INDO)
 
 ![addphoto](-)
 
