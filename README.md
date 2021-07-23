@@ -25,7 +25,7 @@ Klik tombol di bawah untuk join ke group support kami`
 ### String Session 🖇
 `
 Klik tombol Run on repl.it untuk membuat string milikmu, tolong pilih P yah jangan T`
-   [![Run on Repl.it](https://repl.it/badge/github/STARKGANG/friday)](https://replit.com/@apisuserbot/String-Session?v=1)
+   [![Run on Repl.it](https://repl.it/badge/github/STARKGANG/friday)](https://replit.com/@farizjr1/String-Session?v=1)
 
 ### <p align="left">DEPLOY VIR MUSIC INDO BOT ♫</p>
 `
