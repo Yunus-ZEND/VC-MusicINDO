@@ -78,7 +78,6 @@ async def stop(_, message: Message):
 
 @Client.on_message(command("skip") & other_filters)
 @errors
-@authorized_users_only
 async def skip(_, message: Message):
     global que
     chat_id = get_chat_id(message.chat)
