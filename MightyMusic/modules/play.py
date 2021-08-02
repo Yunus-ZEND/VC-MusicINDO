@@ -18,24 +18,23 @@ import requests
 import wget
 from PIL import Image, ImageDraw, ImageFont
 from pyrogram import Client, filters
-from pyrogram.types import Voice
 from pyrogram.errors import UserAlreadyParticipant
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
+from pyrogram.types import (InlineKeyboardButton, InlineKeyboardMarkup,
+                            Message, Voice)
 from Python_ARQ import ARQ
 from youtube_search import YoutubeSearch
 
 from MightyMusic.config import ARQ_API_KEY, ASSISTANT_NAME
 from MightyMusic.config import BOT_NAME as bn
 from MightyMusic.config import DURATION_LIMIT
-from MightyMusic.config import SUPPORT_CHANNEL as updateschannel
 from MightyMusic.config import OWNER_USERNAME as own
+from MightyMusic.config import SUPPORT_CHANNEL as updateschannel
 from MightyMusic.config import que
 from MightyMusic.function.admins import admins as a
 from MightyMusic.helpers.admins import get_administrators
 from MightyMusic.helpers.channelmusic import get_chat_id
+from MightyMusic.helpers.decorators import authorized_users_only, errors
 from MightyMusic.helpers.errors import DurationLimitError
-from MightyMusic.helpers.decorators import errors
-from MightyMusic.helpers.decorators import authorized_users_only
 from MightyMusic.helpers.filters import command, other_filters
 from MightyMusic.helpers.gets import get_file_name
 from MightyMusic.services.callsmusic import callsmusic, queues

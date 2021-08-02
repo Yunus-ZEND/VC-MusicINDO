@@ -1,4 +1,4 @@
-# Copyright (C) 2021 Vc-MusicINDO Yunus-ZEND 
+# Copyright (C) 2021 Vc-MusicINDO Yunus-ZEND
 #
 # Free Software Foundation, LICENSE GNU GPL v3.0 <https://github.com/Yunus-ZEND/MightyProject/blob/MightyProject/LICENSE>
 # Everyone is permitted to copy and distribute verbatim copies
@@ -6,15 +6,15 @@
 #
 # Creator And Contributor
 
-from pyrogram import Client
-import asyncio
-from MightyMusic.config import SUDO_USERS, PMPERMIT
-from pyrogram import filters
+from pyrogram import Client, filters
 from pyrogram.types import Message
+
+from MightyMusic.config import PMPERMIT, SUDO_USERS
 from MightyMusic.services.callsmusic.callsmusic import client as USER
 
-PMSET =True
+PMSET = True
 pchats = []
+
 
 @USER.on_message(filters.text & filters.private & ~filters.me & ~filters.bot)
 async def pmPermit(client: USER, message: Message):
@@ -29,7 +29,6 @@ async def pmPermit(client: USER, message: Message):
             )
             return
 
-    
 
 @Client.on_message(filters.command(["/pmpermit"]))
 async def bye(client: Client, message: Message):
@@ -46,15 +45,17 @@ async def bye(client: Client, message: Message):
             await message.reply_text("Pmpermit Dinonaktifkan")
             return
 
-@USER.on_message(filters.text & filters.private & filters.me)        
+
+@USER.on_message(filters.text & filters.private & filters.me)
 async def autopmPermiat(client: USER, message: Message):
     chat_id = message.chat.id
     if not chat_id in pchats:
         pchats.append(chat_id)
         await message.reply_text("Disetujui untuk PM karena pesan keluar")
         return
-    message.continue_propagation()    
-    
+    message.continue_propagation()
+
+
 @USER.on_message(filters.command("ok", [".", ""]) & filters.me & filters.private)
 async def pmPermiat(client: USER, message: Message):
     chat_id = message.chat.id
@@ -62,8 +63,8 @@ async def pmPermiat(client: USER, message: Message):
         pchats.append(chat_id)
         await message.reply_text("Menyetujui PM dari orang ini")
         return
-    message.continue_propagation()    
-    
+    message.continue_propagation()
+
 
 @USER.on_message(filters.command("blok", [".", ""]) & filters.me & filters.private)
 async def rmpmPermiat(client: USER, message: Message):
@@ -72,4 +73,4 @@ async def rmpmPermiat(client: USER, message: Message):
         pchats.remove(chat_id)
         await message.reply_text("Menolak PM dari orang ini")
         return
-    message.continue_propagation()    
+    message.continue_propagation()
