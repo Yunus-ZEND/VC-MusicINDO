@@ -7,6 +7,7 @@ from MightyMusic.helpers.errors import DurationLimitError
 
 ydl_opts = {
     "format": "bestaudio/best",
+    "verbose": True,
     "geo-bypass": True,
     "nocheckcertificate": True,
     "outtmpl": "downloads/%(id)s.%(ext)s",
