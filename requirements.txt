@@ -1,6 +1,6 @@
 Pyrogram
 TgCrypto
-pytgcalls[pyrogram]
+pytgcalls==2.1.0
 python-dotenv
 youtube_dl
 youtube_search_python
