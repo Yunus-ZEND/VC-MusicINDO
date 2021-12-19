@@ -1,14 +1,14 @@
-# Copyright (C) 2021 Vc-MusicINDO Yunus-ZEND 
+# Copyright (C) 2021 Vc-MusicINDO Yunus-ZEND
 #
 # Free Software Foundation, LICENSE GNU GPL v3.0 <https://github.com/Yunus-ZEND/MightyProject/blob/MightyProject/LICENSE>
 # Everyone is permitted to copy and distribute verbatim copies
 # of this license ytsearch, but changing it is not allowed.
 #
-# Creator And Contributor 
-
+# Creator And Contributor
 
 import logging
 
+import pyrogram
 from pyrogram import Client as app
 from pyrogram.types import Message
 from youtube_search import YoutubeSearch
@@ -17,8 +17,6 @@ logging.basicConfig(
     level=logging.DEBUG, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 )
 logger = logging.getLogger(__name__)
-
-import pyrogram
 
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 

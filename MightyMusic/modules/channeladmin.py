@@ -1,4 +1,4 @@
-# Copyright (C) 2021 Vc-MusicINDO Yunus-ZEND 
+# Copyright (C) 2021 Vc-MusicINDO Yunus-ZEND
 #
 # Free Software Foundation, LICENSE GNU GPL v3.0 <https://github.com/Yunus-ZEND/MightyProject/blob/MightyProject/LICENSE>
 # Everyone is permitted to copy and distribute verbatim copies
@@ -18,18 +18,19 @@ from MightyMusic.helpers.filters import command, other_filters
 from MightyMusic.services.callsmusic import callsmusic
 
 
-
-@Client.on_message(filters.command(["channelpause","cpause"]) & filters.group & ~filters.edited)
+@Client.on_message(
+    filters.command(["channelpause", "cpause"]) & filters.group & ~filters.edited
+)
 @errors
 @authorized_users_only
 async def pause(_, message: Message):
     try:
-      conchat = await _.get_chat(message.chat.id)
-      conid = conchat.linked_chat.id
-      chid = conid
-    except:
-      await message.reply("Apakah obrolan Anda terhubung?")
-      return    
+        conchat = await _.get_chat(message.chat.id)
+        conid = conchat.linked_chat.id
+        chid = conid
+    except ConnectionError:
+        await message.reply("Apakah obrolan Anda terhubung?")
+        return
     chat_id = chid
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
         callsmusic.pytgcalls.active_calls[chat_id] == "paused"
@@ -40,17 +41,19 @@ async def pause(_, message: Message):
         await message.reply_text("▶️ Dijeda!")
 
 
-@Client.on_message(filters.command(["channelresume","cresume"]) & filters.group & ~filters.edited)
+@Client.on_message(
+    filters.command(["channelresume", "cresume"]) & filters.group & ~filters.edited
+)
 @errors
 @authorized_users_only
 async def resume(_, message: Message):
     try:
-      conchat = await _.get_chat(message.chat.id)
-      conid = conchat.linked_chat.id
-      chid = conid
-    except:
-      await message.reply("Apakah obrolan Anda terhubung?")
-      return    
+        conchat = await _.get_chat(message.chat.id)
+        conid = conchat.linked_chat.id
+        chid = conid
+    except Exception:
+        await message.reply("Apakah obrolan Anda terhubung?")
+        return
     chat_id = chid
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
         callsmusic.pytgcalls.active_calls[chat_id] == "playing"
@@ -61,17 +64,19 @@ async def resume(_, message: Message):
         await message.reply_text("⏸ Dilanjutkan!")
 
 
-@Client.on_message(filters.command(["channelend","cend"]) & filters.group & ~filters.edited)
+@Client.on_message(
+    filters.command(["channelend", "cend"]) & filters.group & ~filters.edited
+)
 @errors
 @authorized_users_only
 async def stop(_, message: Message):
     try:
-      conchat = await _.get_chat(message.chat.id)
-      conid = conchat.linked_chat.id
-      chid = conid
-    except:
-      await message.reply("Apakah obrolan Anda terhubung?")
-      return    
+        conchat = await _.get_chat(message.chat.id)
+        conid = conchat.linked_chat.id
+        chid = conid
+    except ConnectionError:
+        await message.reply("Apakah obrolan Anda terhubung?")
+        return
     chat_id = chid
     if chat_id not in callsmusic.pytgcalls.active_calls:
         await message.reply_text("❗ Tidak ada yang streaming!")
@@ -85,18 +90,20 @@ async def stop(_, message: Message):
         await message.reply_text("❌  Streaming di stop!")
 
 
-@Client.on_message(filters.command(["channelskip","cskip"]) & filters.group & ~filters.edited)
+@Client.on_message(
+    filters.command(["channelskip", "cskip"]) & filters.group & ~filters.edited
+)
 @errors
 @authorized_users_only
 async def skip(_, message: Message):
     global que
     try:
-      conchat = await _.get_chat(message.chat.id)
-      conid = conchat.linked_chat.id
-      chid = conid
-    except:
-      await message.reply("Apakah obrolan Anda terhubung?")
-      return    
+        conchat = await _.get_chat(message.chat.id)
+        conid = conchat.linked_chat.id
+        chid = conid
+    except ConnectionError:
+        await message.reply("Apakah obrolan Anda terhubung?")
+        return
     chat_id = chid
     if chat_id not in callsmusic.pytgcalls.active_calls:
         await message.reply_text("❗ Tidak ada yang bermain untuk dilewati!")
@@ -115,19 +122,21 @@ async def skip(_, message: Message):
         skip = qeue.pop(0)
     if not qeue:
         return
-    await message.reply_text(f"- Dilewati **{skip[0]}**\n- Sedang dimainkan **{qeue[0][0]}**")
+    await message.reply_text(
+        f"- Dilewati **{skip[0]}**\n- Sedang dimainkan **{qeue[0][0]}**"
+    )
 
 
 @Client.on_message(filters.command("channeladmincache"))
 @errors
 async def admincache(client, message: Message):
     try:
-      conchat = await client.get_chat(message.chat.id)
-      conid = conchat.linked_chat.id
-      chid = conid
-    except:
-      await message.reply("Apakah obrolan Anda terhubung?")
-      return
+        conchat = await client.get_chat(message.chat.id)
+        conid = conchat.linked_chat.id
+        chid = conid
+    except ConnectionError:
+        await message.reply("Apakah obrolan Anda terhubung?")
+        return
     set(
         chid,
         [
